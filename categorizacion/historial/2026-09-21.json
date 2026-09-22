@@ -1,9 +1,9 @@
 {
   "fecha_objetivo": "21/09/2026",
-  "generado": "2026-09-22T17:03:33.765706Z",
+  "generado": "2026-09-22T17:11:59.308675Z",
   "filas": [
     {
-      "UNIDAD AGRICOLA": "",
+      "UNIDAD AGRICOLA": "ZONA-HUAMBACHO",
       "PROVEEDOR": "ALVA RAMIREZ KATHERINE MARIANNE",
       "CAMPO": "C1",
       "CATEGORÍA": "CAT6",
@@ -11,7 +11,7 @@
       "STATUS": "CATEGORIZADO"
     },
     {
-      "UNIDAD AGRICOLA": "",
+      "UNIDAD AGRICOLA": "ZONA-HUAMBACHO",
       "PROVEEDOR": "ALVA RAMIREZ KATHERINE MARIANNE",
       "CAMPO": "C2",
       "CATEGORÍA": "CAT6",
@@ -19,7 +19,7 @@
       "STATUS": "CATEGORIZADO"
     },
     {
-      "UNIDAD AGRICOLA": "",
+      "UNIDAD AGRICOLA": "ZONA-LAGUNAS",
       "PROVEEDOR": "MATEO ESPINOZA JHONATHAN JOE",
       "CAMPO": "C1",
       "CATEGORÍA": "CAT6",
@@ -27,7 +27,7 @@
       "STATUS": "CATEGORIZADO"
     },
     {
-      "UNIDAD AGRICOLA": "",
+      "UNIDAD AGRICOLA": "ZONA-CAYALTI",
       "PROVEEDOR": "RODRIGUEZ REYES MODESTO",
       "CAMPO": "C1",
       "CATEGORÍA": "CAT6",
@@ -35,7 +35,7 @@
       "STATUS": "CATEGORIZADO"
     },
     {
-      "UNIDAD AGRICOLA": "",
+      "UNIDAD AGRICOLA": "ZONA-LAGUNAS",
       "PROVEEDOR": "ZUÑIGA HERNANDEZ JAN JESUS",
       "CAMPO": "C1",
       "CATEGORÍA": "CAT6",
