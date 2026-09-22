@@ -37,6 +37,12 @@
     border-radius: 10px; font-size: 1rem; font-weight: 700; cursor: pointer; margin-top: 6px;
   }
   .btn-iniciar:disabled { opacity: 0.6; }
+  .fase2-caja { background: white; border-radius: 10px; padding: 14px; margin-top: 14px; text-align: center; }
+  .btn-fase2 {
+    width: 100%; padding: 14px; background: var(--azul); color: white; border: none;
+    border-radius: 10px; font-size: 1rem; font-weight: 700; cursor: pointer;
+  }
+  .fase2-nota { font-size: 0.8rem; color: #777; margin-top: 8px; }
   .progreso-caja { background: white; border-radius: 10px; padding: 14px; margin-top: 14px; text-align: center; }
   .progreso-barra-fondo { background: #eee; border-radius: 20px; height: 10px; overflow: hidden; margin: 10px 0; }
   .progreso-barra { background: var(--azul); height: 100%; width: 0%; transition: width .3s ease; }
@@ -132,6 +138,11 @@
       <button id="btnCompartir">&#128228; Compartir</button>
     </div>
     <div id="bannerEstado"></div>
+  </div>
+
+  <div class="fase2-caja" id="fase2Caja" style="display:none">
+    <button class="btn-fase2" id="btnFase2">Iniciar Fase 2</button>
+    <div class="fase2-nota">Categorización de las unidades agrícolas propias (por implementar).</div>
   </div>
 
   <div class="historial-caja">
@@ -304,6 +315,7 @@
 
   function renderResultado(data) {
     resultadoCaja.style.display = 'block';
+    document.getElementById('fase2Caja').style.display = 'block';
     const img = document.getElementById('resultadoImagen');
     const banner = document.getElementById('bannerEstado');
     const wrap = img.closest('.resultado-imagen-wrap');
@@ -355,6 +367,13 @@
         alert('Tu navegador no soporta compartir imágenes directamente; usa el botón de descargar.');
       }
     } catch (e) {}
+  });
+
+  // Fase 2 (categorización de unidades agrícolas propias) todavía no
+  // está implementada -- este botón por ahora solo deja el lugar listo
+  // en la página para cuando se arme esa parte.
+  document.getElementById('btnFase2').addEventListener('click', () => {
+    alert('Fase 2 (categorización de unidades agrícolas propias) aún no está implementada. Próximamente aquí se podrá iniciar ese proceso.');
   });
 
   inputHistorial.addEventListener('change', async () => {
