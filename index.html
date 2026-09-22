@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Categorización de Campos Terceros (prueba)</title>
+<meta name="theme-color" content="#E30613">
+<style>
+  :root { --verde: #92D050; --rojo: #FF0000; --azul: #4472C4; --rojo-danper: #E30613; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    background: #f2f4f8; margin: 0; padding: 0; color: #1a1a1a;
+  }
+  header {
+    background: var(--rojo-danper); color: white; text-align: center;
+    padding: calc(16px + env(safe-area-inset-top)) 20px 16px;
+  }
+  header h1 { margin: 0; font-size: 1.15rem; }
+  header p { margin: 4px 0 0; font-size: 0.8rem; opacity: 0.85; }
+  .contenido { padding: 12px 14px 40px; max-width: 640px; margin: 0 auto; }
+
+  .cat-form { background: white; border-radius: 10px; padding: 14px; margin-bottom: 14px; }
+  .cat-form h3 { margin: 0 0 10px; font-size: 0.95rem; }
+  .cat-campo { margin-bottom: 10px; }
+  .cat-campo label { display: block; font-size: 0.8rem; color: #555; margin-bottom: 4px; }
+  .cat-campo input[type=text], .cat-campo input[type=date], .cat-campo input[type=number] {
+    width: 100%; padding: 8px; border-radius: 8px; border: 1px solid #ccc; font-size: 0.95rem;
+  }
+  .cat-indicador { border: 1px solid #e0e0e0; border-radius: 8px; padding: 10px; margin-bottom: 10px; }
+  .cat-indicador-titulo { font-weight: 700; font-size: 0.85rem; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+  .cat-fila-2 { display: flex; gap: 8px; }
+  .cat-fila-2 > div { flex: 1; }
+  .cat-banda { margin-top: 8px; padding-top: 8px; border-top: 1px dashed #ddd; font-size: 0.85rem; }
+  .btn-iniciar {
+    width: 100%; padding: 14px; background: var(--rojo-danper); color: white; border: none;
+    border-radius: 10px; font-size: 1rem; font-weight: 700; cursor: pointer; margin-top: 6px;
+  }
+  .btn-iniciar:disabled { opacity: 0.6; }
+  .progreso-caja { background: white; border-radius: 10px; padding: 14px; margin-top: 14px; text-align: center; }
+  .progreso-barra-fondo { background: #eee; border-radius: 20px; height: 10px; overflow: hidden; margin: 10px 0; }
+  .progreso-barra { background: var(--azul); height: 100%; width: 0%; transition: width .3s ease; }
+  .progreso-texto { font-size: 0.85rem; color: #555; }
+  .resultado-caja { margin-top: 16px; }
+  .resultado-imagen-wrap { background: white; border-radius: 10px; padding: 10px; text-align: center; }
+  .resultado-imagen-wrap img { max-width: 100%; border-radius: 6px; }
+  .resultado-acciones { display: flex; gap: 10px; margin-top: 10px; }
+  .resultado-acciones button {
+    flex: 1; padding: 10px; border-radius: 8px; border: 1px solid #ccc; background: white; font-size: 0.9rem; cursor: pointer;
+  }
+  .banner-ok { background: rgba(146,208,80,0.18); color: #4c7a1e; border-radius: 10px; padding: 14px; text-align: center; font-weight: 700; margin-top: 14px; }
+  .banner-problema { background: rgba(255,0,0,0.08); border-radius: 10px; padding: 14px; margin-top: 14px; }
+  .banner-problema-titulo { color: #b30000; font-weight: 800; font-size: 1rem; margin-bottom: 8px; }
+  .banner-problema ul { margin: 0; padding-left: 18px; color: #b30000; font-weight: 600; font-size: 0.9rem; }
+  .historial-caja { background: white; border-radius: 10px; padding: 14px; margin-top: 20px; }
+  .consola {
+    background: #111; color: #8ee08e; font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 0.78rem; border-radius: 8px; padding: 12px; white-space: pre-wrap; line-height: 1.4;
+    max-height: 420px; overflow-y: auto; margin-top: 10px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Categorización de Campos Terceros</h1>
+  <p>FOSFINA · Danper (página de prueba)</p>
+</header>
+
+<div class="contenido">
+
+  <div class="cat-form">
+    <h3>Fechas</h3>
+    <div class="cat-campo">
+      <label>Fecha a filtrar</label>
+      <input type="date" id="fecha">
+    </div>
+    <div class="cat-fila-2">
+      <div class="cat-campo"><label>Inicio (tabla final)</label><input type="date" id="fechaInicio"></div>
+      <div class="cat-campo"><label>Fin (tabla final)</label><input type="date" id="fechaFin"></div>
+    </div>
+  </div>
+
+  <div class="cat-form">
+    <h3>Indicadores</h3>
+
+    <div class="cat-indicador">
+      <div class="cat-indicador-titulo"><input type="checkbox" id="larvaEnabled" checked> LARVA DE LEPIDÓPTEROS</div>
+      <div class="cat-campo"><label>Umbral (%)</label><input type="number" id="larvaUmbral" value="10" step="0.1"></div>
+      <div class="cat-banda">
+        <label><input type="checkbox" id="larvaBandaEnabled"> Definir banda especial</label>
+        <div class="cat-fila-2" style="margin-top:6px">
+          <div class="cat-campo"><label>Hasta (%)</label><input type="number" id="larvaBandaHasta" step="0.1"></div>
+          <div class="cat-campo"><label>Categoría</label><input type="number" id="larvaBandaCategoria" value="2"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cat-indicador">
+      <div class="cat-indicador-titulo"><input type="checkbox" id="posturasEnabled" checked> POSTURAS</div>
+      <div class="cat-campo"><label>Umbral (%)</label><input type="number" id="posturasUmbral" value="2" step="0.1"></div>
+      <div class="cat-banda">
+        <label><input type="checkbox" id="posturasBandaEnabled"> Definir banda especial</label>
+        <div class="cat-fila-2" style="margin-top:6px">
+          <div class="cat-campo"><label>Hasta (%)</label><input type="number" id="posturasBandaHasta" step="0.1"></div>
+          <div class="cat-campo"><label>Categoría</label><input type="number" id="posturasBandaCategoria" value="2"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cat-indicador">
+      <div class="cat-indicador-titulo"><input type="checkbox" id="picadosEnabled" checked> PICADOS ELASMOSPALPUS</div>
+      <div class="cat-campo"><label>Umbral (%)</label><input type="number" id="picadosUmbral" value="10" step="0.1"></div>
+      <div class="cat-banda">
+        <label><input type="checkbox" id="picadosBandaEnabled"> Definir banda especial</label>
+        <div class="cat-fila-2" style="margin-top:6px">
+          <div class="cat-campo"><label>Hasta (%)</label><input type="number" id="picadosBandaHasta" step="0.1"></div>
+          <div class="cat-campo"><label>Categoría</label><input type="number" id="picadosBandaCategoria" value="2"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="btn-iniciar" id="btnIniciar">Iniciar</button>
+
+  <div class="progreso-caja" id="progresoCaja" style="display:none">
+    <div class="progreso-texto" id="progresoTexto">Iniciando...</div>
+    <div class="progreso-barra-fondo"><div class="progreso-barra" id="progresoBarra"></div></div>
+  </div>
+
+  <div class="resultado-caja" id="resultadoCaja" style="display:none">
+    <div class="resultado-imagen-wrap">
+      <img id="resultadoImagen" src="" alt="Categorización">
+    </div>
+    <div class="resultado-acciones">
+      <button id="btnDescargar">&#11015;&#65039; Descargar</button>
+      <button id="btnCompartir">&#128228; Compartir</button>
+    </div>
+    <div id="bannerEstado"></div>
+  </div>
+
+  <div class="historial-caja">
+    <h3>Historial</h3>
+    <input type="date" id="inputHistorial">
+    <div class="consola" id="consolaHistorial" style="display:none"></div>
+  </div>
+
+</div>
+
+<script>
+(function() {
+  // El token de GitHub ya NO vive en esta página (GitHub bloquea siempre
+  // cualquier archivo público con un token real, codificado o no). En su
+  // lugar, esta página le pide a un Worker de Cloudflare (que sí tiene el
+  // token, guardado ahí de forma segura) que dispare el workflow por
+  // nosotros.
+  const URL_WORKER = "https://categorizacion-disparo.johanchinguel07.workers.dev";
+
+  function fmtISO(d) {
+    const dd = String(d.getDate()).padStart(2, '0');
+    const mm = String(d.getMonth() + 1).padStart(2, '0');
+    return `${d.getFullYear()}-${mm}-${dd}`;
+  }
+  function isoToDDMM(iso) {
+    const [y, m, d] = iso.split('-');
+    return `${d}/${m}/${y}`;
+  }
+
+  const hoyCat = new Date();
+  const ayerCat = new Date(hoyCat); ayerCat.setDate(hoyCat.getDate() - 1);
+  document.getElementById('fecha').value = fmtISO(ayerCat);
+  document.getElementById('fechaInicio').value = fmtISO(hoyCat);
+  document.getElementById('fechaFin').value = fmtISO(hoyCat);
+
+  function indicador(prefijo) {
+    const enabled = document.getElementById(prefijo + 'Enabled').checked;
+    if (!enabled) return { enabled: false };
+    const umbral = parseFloat(document.getElementById(prefijo + 'Umbral').value) / 100;
+    const cfg = { enabled: true, umbral: umbral, banda_enabled: false };
+    const bandaEnabled = document.getElementById(prefijo + 'BandaEnabled').checked;
+    if (bandaEnabled) {
+      cfg.banda_enabled = true;
+      cfg.banda_upper = parseFloat(document.getElementById(prefijo + 'BandaHasta').value) / 100;
+      cfg.banda_categoria = parseInt(document.getElementById(prefijo + 'BandaCategoria').value, 10);
+    }
+    return cfg;
+  }
+
+  function armarConfig() {
+    return {
+      fecha: isoToDDMM(document.getElementById('fecha').value),
+      fecha_inicio: isoToDDMM(document.getElementById('fechaInicio').value),
+      fecha_fin: isoToDDMM(document.getElementById('fechaFin').value),
+      indicadores: {
+        LARVA: indicador('larva'),
+        SUMA_POSTURAS: indicador('posturas'),
+        SUMA_PICADOS: indicador('picados'),
+      },
+    };
+  }
+
+  const btnIniciar = document.getElementById('btnIniciar');
+  const progresoCaja = document.getElementById('progresoCaja');
+  const progresoTexto = document.getElementById('progresoTexto');
+  const progresoBarra = document.getElementById('progresoBarra');
+  const resultadoCaja = document.getElementById('resultadoCaja');
+  const LS_KEY = 'categorizacion_dispatch_ts';
+  let intervaloSondeo = null;
+
+  btnIniciar.addEventListener('click', async () => {
+    btnIniciar.disabled = true;
+    resultadoCaja.style.display = 'none';
+    progresoCaja.style.display = 'block';
+    progresoTexto.textContent = 'Enviando orden de inicio...';
+    progresoBarra.style.width = '3%';
+
+    const cfg = armarConfig();
+    try {
+      const resp = await fetch(URL_WORKER, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ config: cfg }),
+      });
+      const data = await resp.json().catch(() => ({}));
+      if (!resp.ok || !data.ok) {
+        throw new Error(data.error || `El intermediario respondió ${resp.status}`);
+      }
+      localStorage.setItem(LS_KEY, Date.now().toString());
+      progresoTexto.textContent = 'Iniciado. Puedes minimizar o cerrar esta página, el proceso sigue igual.';
+      empezarSondeo();
+    } catch (e) {
+      progresoTexto.textContent = 'Error al iniciar: ' + e.message;
+      btnIniciar.disabled = false;
+    }
+  });
+
+  function empezarSondeo() {
+    if (intervaloSondeo) clearInterval(intervaloSondeo);
+    consultarEstado();
+    intervaloSondeo = setInterval(consultarEstado, 5000);
+  }
+
+  async function consultarEstado() {
+    try {
+      const resp = await fetch('categorizacion/status.json?_=' + Date.now());
+      if (!resp.ok) return;
+      const estado = await resp.json();
+
+      const tsDisparo = parseInt(localStorage.getItem(LS_KEY) || '0', 10);
+      const tsEstado = new Date(estado.actualizado).getTime();
+      if (tsDisparo && tsEstado < tsDisparo - 5000) return;
+
+      progresoCaja.style.display = 'block';
+      const pct = Math.round((estado.paso / (estado.total_pasos || 6)) * 100);
+      progresoBarra.style.width = Math.max(pct, 4) + '%';
+      progresoTexto.textContent = estado.mensaje || '...';
+
+      if (estado.done) {
+        clearInterval(intervaloSondeo);
+        btnIniciar.disabled = false;
+        if (estado.error) {
+          progresoTexto.textContent = 'Error: ' + estado.error;
+        } else {
+          progresoCaja.style.display = 'none';
+          mostrarResultado();
+        }
+      }
+    } catch (e) {}
+  }
+
+  if (localStorage.getItem(LS_KEY)) empezarSondeo();
+
+  async function mostrarResultado() {
+    try {
+      const resp = await fetch('categorizacion/ultima.json?_=' + Date.now());
+      if (!resp.ok) return;
+      renderResultado(await resp.json());
+    } catch (e) {}
+  }
+
+  function renderResultado(data) {
+    resultadoCaja.style.display = 'block';
+    const img = document.getElementById('resultadoImagen');
+    const banner = document.getElementById('bannerEstado');
+    const wrap = img.closest('.resultado-imagen-wrap');
+    const acciones = document.querySelector('.resultado-acciones');
+
+    if (data.sin_desviaciones) {
+      wrap.style.display = 'none';
+      acciones.style.display = 'none';
+      banner.innerHTML = `<div class="banner-ok">&#9989; No hubo desviaciones para el ${data.fecha_objetivo}.</div>`;
+      return;
+    }
+    wrap.style.display = 'block';
+    acciones.style.display = 'flex';
+    img.src = 'categorizacion/ultima.png?_=' + Date.now();
+
+    if (data.todo_ok) {
+      banner.innerHTML = `<div class="banner-ok">&#9989; Todo categorizado correctamente (${data.fecha_objetivo}).</div>`;
+    } else {
+      const items = data.problemas.map(p =>
+        `<li>${p.unidad_agricola || '(sin unidad)'} — Módulo ${p.modulo || '-'} — Campo ${p.campo} (${p.status})</li>`
+      ).join('');
+      banner.innerHTML = `
+        <div class="banner-problema">
+          <div class="banner-problema-titulo">&#9888;&#65039; ${data.problemas.length} campo(s) sin categorizar</div>
+          <ul>${items}</ul>
+        </div>`;
+    }
+  }
+
+  document.getElementById('btnDescargar').addEventListener('click', async () => {
+    const resp = await fetch('categorizacion/ultima.png');
+    const blob = await resp.blob();
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'categorizacion.png';
+    a.click();
+    URL.revokeObjectURL(url);
+  });
+
+  document.getElementById('btnCompartir').addEventListener('click', async () => {
+    try {
+      const resp = await fetch('categorizacion/ultima.png');
+      const blob = await resp.blob();
+      const archivo = new File([blob], 'categorizacion.png', { type: 'image/png' });
+      if (navigator.canShare && navigator.canShare({ files: [archivo] })) {
+        await navigator.share({ files: [archivo], title: 'Categorización de Campos Terceros' });
+      } else {
+        alert('Tu navegador no soporta compartir imágenes directamente; usa el botón de descargar.');
+      }
+    } catch (e) {}
+  });
+
+  const inputHistorial = document.getElementById('inputHistorial');
+  const consolaHistorial = document.getElementById('consolaHistorial');
+  inputHistorial.addEventListener('change', async () => {
+    const iso = inputHistorial.value;
+    if (!iso) return;
+    consolaHistorial.style.display = 'block';
+    consolaHistorial.textContent = 'Cargando...';
+    try {
+      const resp = await fetch(`categorizacion/historial/${iso}.json?_=` + Date.now());
+      if (!resp.ok) {
+        consolaHistorial.textContent = `No hay registro guardado para ${isoToDDMM(iso)}.`;
+        return;
+      }
+      consolaHistorial.textContent = formatearConsola(await resp.json());
+    } catch (e) {
+      consolaHistorial.textContent = 'No se pudo cargar el historial.';
+    }
+  });
+
+  function formatearConsola(data) {
+    let txt = `Categorización de Campos Terceros — ${data.fecha_objetivo}\n`;
+    txt += '='.repeat(50) + '\n\n';
+    if (data.sin_desviaciones) {
+      txt += 'No hubo desviaciones ese día.\n';
+      return txt;
+    }
+    (data.filas || []).forEach(f => {
+      const status = f['STATUS'] || '';
+      const marca = status === 'CATEGORIZADO' ? '[OK]' : '[!!]';
+      txt += `${marca} ${f['UNIDAD AGRICOLA'] || ''} | ${f['PROVEEDOR'] || ''} | Campo ${f['CAMPO'] || ''} | ${f['CATEGORÍA'] || ''} | ${status}\n`;
+      if (f['MOTIVO']) txt += `      Motivo: ${f['MOTIVO']}\n`;
+    });
+    txt += '\n';
+    if (data.todo_ok) {
+      txt += '✅ Todo categorizado correctamente.\n';
+    } else {
+      txt += `⚠️ ${(data.problemas || []).length} campo(s) sin categorizar:\n`;
+      (data.problemas || []).forEach(p => {
+        txt += `   - ${p.unidad_agricola || '(sin unidad)'} / Módulo ${p.modulo || '-'} / Campo ${p.campo} (${p.status})\n`;
+      });
+    }
+    return txt;
+  }
+})();
+</script>
+
+</body>
+</html>
