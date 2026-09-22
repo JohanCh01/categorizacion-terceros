@@ -1,10 +1,10 @@
 {
-  "running": false,
+  "running": true,
   "done": false,
-  "error": "'fecha'",
-  "paso": 0,
+  "error": null,
+  "paso": 1,
   "total_pasos": 6,
-  "mensaje": "Error: KeyError: 'fecha'",
-  "fecha_objetivo": null,
-  "actualizado": "2026-09-22T16:28:30.181443Z"
+  "mensaje": "Descargando FOSFINA desde Google Sheets...",
+  "fecha_objetivo": "21/09/2026",
+  "actualizado": "2026-09-22T16:59:40.557539Z"
 }
