@@ -53,11 +53,6 @@
   .banner-problema-titulo { color: #b30000; font-weight: 800; font-size: 1rem; margin-bottom: 8px; }
   .banner-problema ul { margin: 0; padding-left: 18px; color: #b30000; font-weight: 600; font-size: 0.9rem; }
   .historial-caja { background: white; border-radius: 10px; padding: 14px; margin-top: 20px; }
-  .consola {
-    background: #111; color: #8ee08e; font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
-    font-size: 0.78rem; border-radius: 8px; padding: 12px; white-space: pre-wrap; line-height: 1.4;
-    max-height: 420px; overflow-y: auto; margin-top: 10px;
-  }
 </style>
 </head>
 <body>
@@ -140,9 +135,14 @@
   </div>
 
   <div class="historial-caja">
-    <h3>Historial</h3>
+    <h3>Historial (últimos 7 días)</h3>
     <input type="date" id="inputHistorial">
-    <div class="consola" id="consolaHistorial" style="display:none"></div>
+    <div class="resultado-caja" id="historialResultado" style="display:none">
+      <div class="resultado-imagen-wrap">
+        <img id="historialImagen" src="" alt="Historial">
+      </div>
+      <div id="historialBanner"></div>
+    </div>
   </div>
 
 </div>
@@ -155,6 +155,7 @@
   // token, guardado ahí de forma segura) que dispare el workflow por
   // nosotros.
   const URL_WORKER = "https://categorizacion-disparo.johanchinguel07.workers.dev";
+  const DIAS_HISTORIAL = 7;
 
   function fmtISO(d) {
     const dd = String(d.getDate()).padStart(2, '0');
@@ -171,6 +172,14 @@
   document.getElementById('fecha').value = fmtISO(ayerCat);
   document.getElementById('fechaInicio').value = fmtISO(hoyCat);
   document.getElementById('fechaFin').value = fmtISO(hoyCat);
+
+  // El historial solo se conserva publicado por 7 días (de hoy hacia
+  // atrás) -- lo más viejo ya queda consolidado en el Excel, así que el
+  // selector de fecha del historial no deja elegir fuera de ese rango.
+  const haceUnaSemanaCat = new Date(hoyCat); haceUnaSemanaCat.setDate(hoyCat.getDate() - (DIAS_HISTORIAL - 1));
+  const inputHistorial = document.getElementById('inputHistorial');
+  inputHistorial.min = fmtISO(haceUnaSemanaCat);
+  inputHistorial.max = fmtISO(hoyCat);
 
   // Bloquea/desbloquea "Hasta (%)" y "Categoría" según si "Definir banda
   // especial" está marcado, para cada indicador (larva, posturas, picados).
@@ -348,48 +357,52 @@
     } catch (e) {}
   });
 
-  const inputHistorial = document.getElementById('inputHistorial');
-  const consolaHistorial = document.getElementById('consolaHistorial');
   inputHistorial.addEventListener('change', async () => {
     const iso = inputHistorial.value;
     if (!iso) return;
-    consolaHistorial.style.display = 'block';
-    consolaHistorial.textContent = 'Cargando...';
+    const cont = document.getElementById('historialResultado');
+    const wrap = document.querySelector('#historialResultado .resultado-imagen-wrap');
+    const banner = document.getElementById('historialBanner');
+    cont.style.display = 'block';
+    wrap.style.display = 'none';
+    banner.innerHTML = 'Cargando...';
     try {
       const resp = await fetch(`categorizacion/historial/${iso}.json?_=` + Date.now());
       if (!resp.ok) {
-        consolaHistorial.textContent = `No hay registro guardado para ${isoToDDMM(iso)}.`;
+        banner.innerHTML = `No hay registro guardado para ${isoToDDMM(iso)}.`;
         return;
       }
-      consolaHistorial.textContent = formatearConsola(await resp.json());
+      renderHistorial(await resp.json(), iso);
     } catch (e) {
-      consolaHistorial.textContent = 'No se pudo cargar el historial.';
+      banner.innerHTML = 'No se pudo cargar el historial.';
     }
   });
 
-  function formatearConsola(data) {
-    let txt = `Categorización de Campos Terceros — ${data.fecha_objetivo}\n`;
-    txt += '='.repeat(50) + '\n\n';
+  function renderHistorial(data, iso) {
+    const img = document.getElementById('historialImagen');
+    const wrap = img.closest('.resultado-imagen-wrap');
+    const banner = document.getElementById('historialBanner');
+
     if (data.sin_desviaciones) {
-      txt += 'No hubo desviaciones ese día.\n';
-      return txt;
+      wrap.style.display = 'none';
+      banner.innerHTML = `<div class="banner-ok">&#9989; No hubo desviaciones para el ${data.fecha_objetivo}.</div>`;
+      return;
     }
-    (data.filas || []).forEach(f => {
-      const status = f['STATUS'] || '';
-      const marca = status === 'CATEGORIZADO' ? '[OK]' : '[!!]';
-      txt += `${marca} ${f['UNIDAD AGRICOLA'] || ''} | ${f['PROVEEDOR'] || ''} | Campo ${f['CAMPO'] || ''} | ${f['CATEGORÍA'] || ''} | ${status}\n`;
-      if (f['MOTIVO']) txt += `      Motivo: ${f['MOTIVO']}\n`;
-    });
-    txt += '\n';
+    wrap.style.display = 'block';
+    img.src = `categorizacion/historial/${iso}.png?_=` + Date.now();
+
     if (data.todo_ok) {
-      txt += '✅ Todo categorizado correctamente.\n';
+      banner.innerHTML = `<div class="banner-ok">&#9989; Todo categorizado correctamente (${data.fecha_objetivo}).</div>`;
     } else {
-      txt += `⚠️ ${(data.problemas || []).length} campo(s) sin categorizar:\n`;
-      (data.problemas || []).forEach(p => {
-        txt += `   - ${p.unidad_agricola || '(sin unidad)'} / Módulo ${p.modulo || '-'} / Campo ${p.campo} (${p.status})\n`;
-      });
+      const items = data.problemas.map(p =>
+        `<li>${p.unidad_agricola || '(sin unidad)'} — Módulo ${p.modulo || '-'} — Campo ${p.campo} (${p.status})</li>`
+      ).join('');
+      banner.innerHTML = `
+        <div class="banner-problema">
+          <div class="banner-problema-titulo">&#9888;&#65039; ${data.problemas.length} campo(s) sin categorizar</div>
+          <ul>${items}</ul>
+        </div>`;
     }
-    return txt;
   }
 })();
 </script>
