@@ -1,0 +1,10 @@
+{
+  "running": false,
+  "done": false,
+  "error": "'fecha'",
+  "paso": 0,
+  "total_pasos": 6,
+  "mensaje": "Error: KeyError: 'fecha'",
+  "fecha_objetivo": null,
+  "actualizado": "2026-09-22T16:28:30.181443Z"
+}
