@@ -1,8 +1,65 @@
 {
   "fecha_objetivo": "23/09/2026",
-  "generado": "2026-09-23T12:52:43.949630Z",
-  "filas": [],
+  "generado": "2026-09-23T13:12:23.011147Z",
+  "filas": [
+    {
+      "UNIDAD AGRICOLA": "ZONA-HUAMBACHO",
+      "PROVEEDOR": "ALVA RAMIREZ KATHERINE MARIANNE",
+      "CAMPO": "C1",
+      "CATEGORÍA": "CAT6",
+      "MOTIVO": "PICADOS > 15%",
+      "STATUS": "CATEGORIZADO"
+    },
+    {
+      "UNIDAD AGRICOLA": "ZONA-HUAMBACHO",
+      "PROVEEDOR": "ALVA RAMIREZ KATHERINE MARIANNE",
+      "CAMPO": "C2",
+      "CATEGORÍA": "CAT6",
+      "MOTIVO": "PICADOS > 15%",
+      "STATUS": "CATEGORIZADO"
+    },
+    {
+      "UNIDAD AGRICOLA": "ZONA-LAGUNAS",
+      "PROVEEDOR": "MATEO ESPINOZA JHONATHAN JOE",
+      "CAMPO": "C1",
+      "CATEGORÍA": "CAT6",
+      "MOTIVO": "LARVA > 10%",
+      "STATUS": "CATEGORIZADO"
+    },
+    {
+      "UNIDAD AGRICOLA": "ZONA-CAYALTI",
+      "PROVEEDOR": "RODRIGUEZ REYES MODESTO",
+      "CAMPO": "C1",
+      "CATEGORÍA": "CAT6",
+      "MOTIVO": "LARVA > 10%",
+      "STATUS": "CATEGORIZADO"
+    },
+    {
+      "UNIDAD AGRICOLA": "ZONA-CAYALTI",
+      "PROVEEDOR": "TERRONES SANCHEZ LUIS AUGUSTO",
+      "CAMPO": "C2",
+      "CATEGORÍA": "CAT6",
+      "MOTIVO": "LARVA > 10%",
+      "STATUS": "CATEGORIZADO"
+    },
+    {
+      "UNIDAD AGRICOLA": "ZONA-BARRANCA",
+      "PROVEEDOR": "TRUJILLO HUAYANE JOSE ISAAC",
+      "CAMPO": "C2",
+      "CATEGORÍA": "CAT6",
+      "MOTIVO": "POSTURAS > 4%",
+      "STATUS": "CATEGORIZADO"
+    },
+    {
+      "UNIDAD AGRICOLA": "ZONA-LAGUNAS",
+      "PROVEEDOR": "ZUÑIGA HERNANDEZ JAN JESUS",
+      "CAMPO": "C1",
+      "CATEGORÍA": "CAT6",
+      "MOTIVO": "PICADOS > 15%",
+      "STATUS": "CATEGORIZADO"
+    }
+  ],
   "problemas": [],
   "todo_ok": true,
-  "sin_desviaciones": true
+  "sin_desviaciones": false
 }
