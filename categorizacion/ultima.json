@@ -1,6 +1,6 @@
 {
   "fecha_objetivo": "23/09/2026",
-  "generado": "2026-09-23T13:24:38.355371Z",
+  "generado": "2026-09-23T18:41:30.486260Z",
   "filas": [
     {
       "UNIDAD AGRICOLA": "ZONA-HUAMBACHO",
@@ -40,14 +40,6 @@
       "CAMPO": "C2",
       "CATEGORÍA": "CAT6",
       "MOTIVO": "LARVA > 10%",
-      "STATUS": "CATEGORIZADO"
-    },
-    {
-      "UNIDAD AGRICOLA": "ZONA-BARRANCA",
-      "PROVEEDOR": "TRUJILLO HUAYANE JOSE ISAAC",
-      "CAMPO": "C2",
-      "CATEGORÍA": "CAT6",
-      "MOTIVO": "POSTURAS > 4%",
       "STATUS": "CATEGORIZADO"
     },
     {
