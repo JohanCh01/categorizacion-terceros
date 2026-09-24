@@ -2,9 +2,9 @@
   "running": true,
   "done": false,
   "error": null,
-  "paso": 5,
+  "paso": 6,
   "total_pasos": 6,
-  "mensaje": "Generando imagen de la tabla final...",
+  "mensaje": "Publicando resultado en el dashboard...",
   "fecha_objetivo": "23/09/2026",
-  "actualizado": "2026-09-24T14:00:03.773251Z"
+  "actualizado": "2026-09-24T14:00:05.346463Z"
 }
