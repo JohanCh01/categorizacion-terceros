@@ -1,0 +1,97 @@
+{
+  "fecha_objetivo": "24/09/2026",
+  "generado": "2026-09-24T14:00:05.345370Z",
+  "filas": [
+    {
+      "UNIDAD AGRICOLA": "ZONA-HUAMBACHO",
+      "PROVEEDOR": "ALVA RAMIREZ KATHERINE MARIANNE",
+      "CAMPO": "C1",
+      "CATEGORÍA": "CAT6",
+      "MOTIVO": "PICADOS > 15%",
+      "STATUS": "CATEGORIZADO"
+    },
+    {
+      "UNIDAD AGRICOLA": "ZONA-MOCUPE",
+      "PROVEEDOR": "ALVARADO LEONARDO HERNAN",
+      "CAMPO": "C1",
+      "CATEGORÍA": "CAT2",
+      "MOTIVO": "POSTURAS 2-4%",
+      "STATUS": "CATEGORIZADO"
+    },
+    {
+      "UNIDAD AGRICOLA": "ZONA-CHIMBOTE",
+      "PROVEEDOR": "CREATIVE TEX ABC SAC",
+      "CAMPO": "C1",
+      "CATEGORÍA": "CAT2",
+      "MOTIVO": "POSTURAS 2-4%",
+      "STATUS": "CATEGORIZADO"
+    },
+    {
+      "UNIDAD AGRICOLA": "ZONA-HUAURA",
+      "PROVEEDOR": "HUACANCA GUIMAREY ERIKA AMANDA",
+      "CAMPO": "C2",
+      "CATEGORÍA": "CAT2",
+      "MOTIVO": "POSTURAS 2-4%",
+      "STATUS": "CATEGORIZADO"
+    },
+    {
+      "UNIDAD AGRICOLA": "ZONA-LAGUNAS",
+      "PROVEEDOR": "MATEO ESPINOZA JHONATHAN JOE",
+      "CAMPO": "C1",
+      "CATEGORÍA": "CAT6",
+      "MOTIVO": "LARVA > 10%",
+      "STATUS": "CATEGORIZADO"
+    },
+    {
+      "UNIDAD AGRICOLA": "ZONA-CAYALTI",
+      "PROVEEDOR": "RODRIGUEZ REYES MODESTO",
+      "CAMPO": "C1",
+      "CATEGORÍA": "CAT6",
+      "MOTIVO": "LARVA > 10%",
+      "STATUS": "CATEGORIZADO"
+    },
+    {
+      "UNIDAD AGRICOLA": "ZONA-CAYALTI",
+      "PROVEEDOR": "TERRONES SANCHEZ LUIS AUGUSTO",
+      "CAMPO": "C3A",
+      "CATEGORÍA": "CAT6",
+      "MOTIVO": "LARVA > 10%",
+      "STATUS": "CATEGORIZADO"
+    },
+    {
+      "UNIDAD AGRICOLA": "ZONA-CAYALTI",
+      "PROVEEDOR": "TERRONES SANCHEZ LUIS AUGUSTO",
+      "CAMPO": "C1",
+      "CATEGORÍA": "CAT6",
+      "MOTIVO": "LARVA > 10%",
+      "STATUS": "CATEGORIZADO"
+    },
+    {
+      "UNIDAD AGRICOLA": "ZONA-CAYALTI",
+      "PROVEEDOR": "TERRONES SANCHEZ LUIS AUGUSTO",
+      "CAMPO": "C4",
+      "CATEGORÍA": "CAT6",
+      "MOTIVO": "LARVA > 10%",
+      "STATUS": "CATEGORIZADO"
+    },
+    {
+      "UNIDAD AGRICOLA": "ZONA-PUEBLO NUEVO",
+      "PROVEEDOR": "VEGA TAICA JOSE GEINER",
+      "CAMPO": "C1",
+      "CATEGORÍA": "CAT2",
+      "MOTIVO": "POSTURAS 2-4%",
+      "STATUS": "CATEGORIZADO"
+    },
+    {
+      "UNIDAD AGRICOLA": "ZONA-LAGUNAS",
+      "PROVEEDOR": "ZUÑIGA HERNANDEZ JAN JESUS",
+      "CAMPO": "C1",
+      "CATEGORÍA": "CAT6",
+      "MOTIVO": "PICADOS > 15%",
+      "STATUS": "CATEGORIZADO"
+    }
+  ],
+  "problemas": [],
+  "todo_ok": true,
+  "sin_desviaciones": false
+}
