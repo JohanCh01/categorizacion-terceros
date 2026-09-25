@@ -1,10 +1,10 @@
 {
-  "running": true,
-  "done": false,
+  "running": false,
+  "done": true,
   "error": null,
   "paso": 6,
   "total_pasos": 6,
-  "mensaje": "Publicando resultado en el dashboard...",
+  "mensaje": "Proceso completado.",
   "fecha_objetivo": "24/09/2026",
-  "actualizado": "2026-09-25T13:39:34.144633Z"
+  "actualizado": "2026-09-25T13:39:40.550054Z"
 }
