@@ -1,37 +1,53 @@
 {
-  "fecha_objetivo": "24/09/2026",
-  "generado": "2026-09-24T14:00:05.345370Z",
+  "fecha_objetivo": "25/09/2026",
+  "generado": "2026-09-25T13:39:34.143443Z",
   "filas": [
+    {
+      "UNIDAD AGRICOLA": "ZONA-CHAO",
+      "PROVEEDOR": "ABANTO RIOS JOSE SEBERINO",
+      "CAMPO": "C1",
+      "CATEGORÍA": "CAT2",
+      "MOTIVO": "POSTURAS 2-4%",
+      "STATUS": "CATEGORIZADO"
+    },
+    {
+      "UNIDAD AGRICOLA": "ZONA-HUAMBACHO",
+      "PROVEEDOR": "ALVA RAMIREZ KATHERINE MARIANNE",
+      "CAMPO": "C2",
+      "CATEGORÍA": "CAT6",
+      "MOTIVO": "PICADOS > 15%",
+      "STATUS": "CATEGORIZADO"
+    },
     {
       "UNIDAD AGRICOLA": "ZONA-HUAMBACHO",
       "PROVEEDOR": "ALVA RAMIREZ KATHERINE MARIANNE",
       "CAMPO": "C1",
       "CATEGORÍA": "CAT6",
       "MOTIVO": "PICADOS > 15%",
-      "STATUS": "CATEGORIZADO"
+      "STATUS": "SIN CATEGORÍA"
     },
     {
       "UNIDAD AGRICOLA": "ZONA-MOCUPE",
       "PROVEEDOR": "ALVARADO LEONARDO HERNAN",
       "CAMPO": "C1",
-      "CATEGORÍA": "CAT2",
-      "MOTIVO": "POSTURAS 2-4%",
+      "CATEGORÍA": "CAT6",
+      "MOTIVO": "POSTURAS > 4%",
       "STATUS": "CATEGORIZADO"
     },
     {
-      "UNIDAD AGRICOLA": "ZONA-CHIMBOTE",
-      "PROVEEDOR": "CREATIVE TEX ABC SAC",
+      "UNIDAD AGRICOLA": "ZONA-CAYALTI",
+      "PROVEEDOR": "BALCAZAR REQUEJO RAFAEL",
       "CAMPO": "C1",
-      "CATEGORÍA": "CAT2",
-      "MOTIVO": "POSTURAS 2-4%",
+      "CATEGORÍA": "CAT6",
+      "MOTIVO": "LARVA > 10%",
       "STATUS": "CATEGORIZADO"
     },
     {
-      "UNIDAD AGRICOLA": "ZONA-HUAURA",
-      "PROVEEDOR": "HUACANCA GUIMAREY ERIKA AMANDA",
-      "CAMPO": "C2",
-      "CATEGORÍA": "CAT2",
-      "MOTIVO": "POSTURAS 2-4%",
+      "UNIDAD AGRICOLA": "ZONA-CAYALTI",
+      "PROVEEDOR": "GUEVARA COTRINA EDGAR ROBINSON",
+      "CAMPO": "C1",
+      "CATEGORÍA": "CAT6",
+      "MOTIVO": "LARVA > 10%",
       "STATUS": "CATEGORIZADO"
     },
     {
@@ -40,6 +56,14 @@
       "CAMPO": "C1",
       "CATEGORÍA": "CAT6",
       "MOTIVO": "LARVA > 10%",
+      "STATUS": "CATEGORIZADO"
+    },
+    {
+      "UNIDAD AGRICOLA": "ZONA-LAGUNAS",
+      "PROVEEDOR": "QUISPE VILLEGAS ERIKA",
+      "CAMPO": "C1",
+      "CATEGORÍA": "CAT2",
+      "MOTIVO": "POSTURAS 2-4%",
       "STATUS": "CATEGORIZADO"
     },
     {
@@ -75,23 +99,28 @@
       "STATUS": "CATEGORIZADO"
     },
     {
-      "UNIDAD AGRICOLA": "ZONA-PUEBLO NUEVO",
-      "PROVEEDOR": "VEGA TAICA JOSE GEINER",
-      "CAMPO": "C1",
-      "CATEGORÍA": "CAT2",
-      "MOTIVO": "POSTURAS 2-4%",
-      "STATUS": "CATEGORIZADO"
-    },
-    {
       "UNIDAD AGRICOLA": "ZONA-LAGUNAS",
       "PROVEEDOR": "ZUÑIGA HERNANDEZ JAN JESUS",
       "CAMPO": "C1",
       "CATEGORÍA": "CAT6",
       "MOTIVO": "PICADOS > 15%",
-      "STATUS": "CATEGORIZADO"
+      "STATUS": "SIN CATEGORÍA"
     }
   ],
-  "problemas": [],
-  "todo_ok": true,
+  "problemas": [
+    {
+      "unidad_agricola": "ZONA-HUAMBACHO",
+      "modulo": "ALVA RAMIREZ KATHERINE MARIANNE",
+      "campo": "C1",
+      "status": "SIN CATEGORÍA"
+    },
+    {
+      "unidad_agricola": "ZONA-LAGUNAS",
+      "modulo": "ZUÑIGA HERNANDEZ JAN JESUS",
+      "campo": "C1",
+      "status": "SIN CATEGORÍA"
+    }
+  ],
+  "todo_ok": false,
   "sin_desviaciones": false
 }
