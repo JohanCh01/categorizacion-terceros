@@ -2,9 +2,9 @@
   "running": true,
   "done": false,
   "error": null,
-  "paso": 1,
+  "paso": 4,
   "total_pasos": 6,
-  "mensaje": "Descargando FOSFINA desde Google Sheets...",
+  "mensaje": "Guardando historial en el Excel acumulado...",
   "fecha_objetivo": "25/09/2026",
-  "actualizado": "2026-09-26T15:56:42.092043Z"
+  "actualizado": "2026-09-26T15:56:53.398064Z"
 }
