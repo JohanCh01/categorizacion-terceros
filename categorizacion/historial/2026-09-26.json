@@ -1,9 +1,9 @@
 {
   "fecha_objetivo": "26/09/2026",
-  "generado": "2026-09-27T19:54:16.491921Z",
+  "generado": "2026-09-27T21:00:48.956506Z",
   "filas": [
     {
-      "UNIDAD AGRICOLA": "",
+      "UNIDAD AGRICOLA": "ZONA-HUAMBACHO",
       "PROVEEDOR": "ALVA RAMIREZ KATHERINE MARIANNE",
       "CAMPO": "C2",
       "CATEGORÍA": "CAT6",
@@ -11,7 +11,7 @@
       "STATUS": "CATEGORIZADO"
     },
     {
-      "UNIDAD AGRICOLA": "",
+      "UNIDAD AGRICOLA": "ZONA-CAYALTI",
       "PROVEEDOR": "BALCAZAR REQUEJO RAFAEL",
       "CAMPO": "C1",
       "CATEGORÍA": "CAT6",
@@ -19,7 +19,7 @@
       "STATUS": "CATEGORIZADO"
     },
     {
-      "UNIDAD AGRICOLA": "",
+      "UNIDAD AGRICOLA": "ZONA-CHIMBOTE",
       "PROVEEDOR": "CREATIVE TEX ABC SAC",
       "CAMPO": "C1",
       "CATEGORÍA": "CAT6",
@@ -27,7 +27,7 @@
       "STATUS": "CATEGORIZADO"
     },
     {
-      "UNIDAD AGRICOLA": "",
+      "UNIDAD AGRICOLA": "ZONA-CHIMBOTE",
       "PROVEEDOR": "FUNDO VARVAL S.A.C.",
       "CAMPO": "C11",
       "CATEGORÍA": "CAT6",
@@ -35,7 +35,7 @@
       "STATUS": "CATEGORIZADO"
     },
     {
-      "UNIDAD AGRICOLA": "",
+      "UNIDAD AGRICOLA": "ZONA-CAYALTI",
       "PROVEEDOR": "GUEVARA COTRINA EDGAR ROBINSON",
       "CAMPO": "C1",
       "CATEGORÍA": "CAT6",
@@ -43,7 +43,7 @@
       "STATUS": "CATEGORIZADO"
     },
     {
-      "UNIDAD AGRICOLA": "",
+      "UNIDAD AGRICOLA": "ZONA-LAGUNAS",
       "PROVEEDOR": "QUISPE VILLEGAS ERIKA",
       "CAMPO": "C1",
       "CATEGORÍA": "CAT6",
@@ -51,7 +51,7 @@
       "STATUS": "CATEGORIZADO"
     },
     {
-      "UNIDAD AGRICOLA": "",
+      "UNIDAD AGRICOLA": "ZONA-VIRU",
       "PROVEEDOR": "RODRIGUEZ FERRER HUGO ANTENOR",
       "CAMPO": "C4",
       "CATEGORÍA": "CAT2",
@@ -59,7 +59,15 @@
       "STATUS": "CATEGORIZADO"
     },
     {
-      "UNIDAD AGRICOLA": "",
+      "UNIDAD AGRICOLA": "ZONA-CAYALTI",
+      "PROVEEDOR": "TERRONES SANCHEZ LUIS AUGUSTO",
+      "CAMPO": "C3A",
+      "CATEGORÍA": "CAT6",
+      "MOTIVO": "LARVA > 10%",
+      "STATUS": "CATEGORIZADO"
+    },
+    {
+      "UNIDAD AGRICOLA": "ZONA-CAYALTI",
       "PROVEEDOR": "TERRONES SANCHEZ LUIS AUGUSTO",
       "CAMPO": "C4",
       "CATEGORÍA": "CAT6",
@@ -67,15 +75,7 @@
       "STATUS": "CATEGORIZADO"
     },
     {
-      "UNIDAD AGRICOLA": "",
-      "PROVEEDOR": "TERRONES SANCHEZ LUIS AUGUSTO",
-      "CAMPO": "C3",
-      "CATEGORÍA": "CAT6",
-      "MOTIVO": "LARVA > 10%",
-      "STATUS": "SIN REGISTRO"
-    },
-    {
-      "UNIDAD AGRICOLA": "",
+      "UNIDAD AGRICOLA": "ZONA-LAGUNAS",
       "PROVEEDOR": "ZUÑIGA HERNANDEZ JAN JESUS",
       "CAMPO": "C1",
       "CATEGORÍA": "CAT6",
@@ -85,13 +85,7 @@
   ],
   "problemas": [
     {
-      "unidad_agricola": "",
-      "modulo": "TERRONES SANCHEZ LUIS AUGUSTO",
-      "campo": "C3",
-      "status": "SIN REGISTRO"
-    },
-    {
-      "unidad_agricola": "",
+      "unidad_agricola": "ZONA-LAGUNAS",
       "modulo": "ZUÑIGA HERNANDEZ JAN JESUS",
       "campo": "C1",
       "status": "SIN CATEGORÍA"
