@@ -1,10 +1,10 @@
 {
-  "running": false,
-  "done": true,
+  "running": true,
+  "done": false,
   "error": null,
-  "paso": 6,
+  "paso": 1,
   "total_pasos": 6,
-  "mensaje": "Proceso completado.",
+  "mensaje": "Descargando FOSFINA desde Google Sheets...",
   "fecha_objetivo": "26/09/2026",
-  "actualizado": "2026-09-27T23:19:07.782162Z"
+  "actualizado": "2026-09-27T23:21:35.430510Z"
 }
