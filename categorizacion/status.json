@@ -2,9 +2,9 @@
   "running": true,
   "done": false,
   "error": null,
-  "paso": 3,
+  "paso": 3.0833333333333335,
   "total_pasos": 6,
-  "mensaje": "Validando categorización de campos en la intranet...",
+  "mensaje": "Validando categorización de campos en la intranet... (1/12)",
   "fecha_objetivo": "26/09/2026",
-  "actualizado": "2026-09-27T23:17:06.757173Z"
+  "actualizado": "2026-09-27T23:17:40.032896Z"
 }
