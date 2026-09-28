@@ -1,6 +1,6 @@
 {
   "fecha_objetivo": "28/09/2026",
-  "generado": "2026-09-28T13:21:19.347121Z",
+  "generado": "2026-09-28T18:20:52.976223Z",
   "filas": [
     {
       "UNIDAD AGRICOLA": "ZONA-HUAMBACHO",
@@ -51,12 +51,12 @@
       "STATUS": "CATEGORIZADO"
     },
     {
-      "UNIDAD AGRICOLA": "",
-      "PROVEEDOR": "MATOS BUSTAMANTE KATHERINE STEPHANIE",
+      "UNIDAD AGRICOLA": "ZONA-BARRANCA",
+      "PROVEEDOR": "MATOS BUSTAMANTE KATHERIN STHEPHANIE",
       "CAMPO": "C1",
       "CATEGORÍA": "CAT6",
       "MOTIVO": "LARVA > 10%",
-      "STATUS": "SIN REGISTRO"
+      "STATUS": "CATEGORIZADO"
     },
     {
       "UNIDAD AGRICOLA": "ZONA-LAGUNAS",
@@ -113,12 +113,6 @@
       "modulo": "ALVA RAMIREZ KATHERINE MARIANNE",
       "campo": "C1",
       "status": "SIN CATEGORÍA"
-    },
-    {
-      "unidad_agricola": "",
-      "modulo": "MATOS BUSTAMANTE KATHERINE STEPHANIE",
-      "campo": "C1",
-      "status": "SIN REGISTRO"
     },
     {
       "unidad_agricola": "ZONA-LAGUNAS",
