@@ -1,9 +1,9 @@
 {
   "fecha_objetivo": "28/09/2026",
-  "generado": "2026-09-28T13:15:57.874129Z",
+  "generado": "2026-09-28T13:21:19.347121Z",
   "filas": [
     {
-      "UNIDAD AGRICOLA": "",
+      "UNIDAD AGRICOLA": "ZONA-HUAMBACHO",
       "PROVEEDOR": "ALVA RAMIREZ KATHERINE MARIANNE",
       "CAMPO": "C2",
       "CATEGORÍA": "CAT6",
@@ -11,7 +11,7 @@
       "STATUS": "CATEGORIZADO"
     },
     {
-      "UNIDAD AGRICOLA": "",
+      "UNIDAD AGRICOLA": "ZONA-HUAMBACHO",
       "PROVEEDOR": "ALVA RAMIREZ KATHERINE MARIANNE",
       "CAMPO": "C1",
       "CATEGORÍA": "CAT6",
@@ -19,7 +19,7 @@
       "STATUS": "SIN CATEGORÍA"
     },
     {
-      "UNIDAD AGRICOLA": "",
+      "UNIDAD AGRICOLA": "ZONA-MOCUPE",
       "PROVEEDOR": "ALVARADO LEONARDO HERNAN",
       "CAMPO": "C1",
       "CATEGORÍA": "CAT6",
@@ -27,15 +27,15 @@
       "STATUS": "CATEGORIZADO"
     },
     {
-      "UNIDAD AGRICOLA": "",
+      "UNIDAD AGRICOLA": "ZONA-BARRANCA",
       "PROVEEDOR": "GARAY VILLEGAS SOFIA ESTEFANIA",
-      "CAMPO": "C1",
+      "CAMPO": "C1B",
       "CATEGORÍA": "CAT6",
       "MOTIVO": "LARVA > 10%",
-      "STATUS": "SIN REGISTRO"
+      "STATUS": "CATEGORIZADO"
     },
     {
-      "UNIDAD AGRICOLA": "",
+      "UNIDAD AGRICOLA": "ZONA-HUAURA",
       "PROVEEDOR": "HUACANCA GUIMAREY ERIKA AMANDA",
       "CAMPO": "C1",
       "CATEGORÍA": "CAT2",
@@ -43,7 +43,7 @@
       "STATUS": "CATEGORIZADO"
     },
     {
-      "UNIDAD AGRICOLA": "",
+      "UNIDAD AGRICOLA": "ZONA-HUARMEY",
       "PROVEEDOR": "MANRIQUE JARA CARTUJOS BRUNO",
       "CAMPO": "C1",
       "CATEGORÍA": "CAT6",
@@ -59,7 +59,7 @@
       "STATUS": "SIN REGISTRO"
     },
     {
-      "UNIDAD AGRICOLA": "",
+      "UNIDAD AGRICOLA": "ZONA-LAGUNAS",
       "PROVEEDOR": "QUISPE VILLEGAS ERIKA",
       "CAMPO": "C1",
       "CATEGORÍA": "CAT6",
@@ -67,7 +67,15 @@
       "STATUS": "CATEGORIZADO"
     },
     {
-      "UNIDAD AGRICOLA": "",
+      "UNIDAD AGRICOLA": "ZONA-CAYALTI",
+      "PROVEEDOR": "TERRONES SANCHEZ LUIS AUGUSTO",
+      "CAMPO": "C3A",
+      "CATEGORÍA": "CAT6",
+      "MOTIVO": "POSTURAS > 4%",
+      "STATUS": "CATEGORIZADO"
+    },
+    {
+      "UNIDAD AGRICOLA": "ZONA-CAYALTI",
       "PROVEEDOR": "TERRONES SANCHEZ LUIS AUGUSTO",
       "CAMPO": "C4",
       "CATEGORÍA": "CAT6",
@@ -75,15 +83,7 @@
       "STATUS": "CATEGORIZADO"
     },
     {
-      "UNIDAD AGRICOLA": "",
-      "PROVEEDOR": "TERRONES SANCHEZ LUIS AUGUSTO",
-      "CAMPO": "C3",
-      "CATEGORÍA": "CAT6",
-      "MOTIVO": "POSTURAS > 4%",
-      "STATUS": "SIN REGISTRO"
-    },
-    {
-      "UNIDAD AGRICOLA": "",
+      "UNIDAD AGRICOLA": "ZONA-CHIMBOTE",
       "PROVEEDOR": "VALVERDE AZAÑA ADRIAN NEL",
       "CAMPO": "C1",
       "CATEGORÍA": "CAT6",
@@ -91,7 +91,7 @@
       "STATUS": "CATEGORIZADO"
     },
     {
-      "UNIDAD AGRICOLA": "",
+      "UNIDAD AGRICOLA": "ZONA-PUEBLO NUEVO",
       "PROVEEDOR": "VEGA TAICA JOSE GEINER",
       "CAMPO": "C1",
       "CATEGORÍA": "CAT6",
@@ -99,7 +99,7 @@
       "STATUS": "CATEGORIZADO"
     },
     {
-      "UNIDAD AGRICOLA": "",
+      "UNIDAD AGRICOLA": "ZONA-LAGUNAS",
       "PROVEEDOR": "ZUÑIGA HERNANDEZ JAN JESUS",
       "CAMPO": "C1",
       "CATEGORÍA": "CAT6",
@@ -109,16 +109,10 @@
   ],
   "problemas": [
     {
-      "unidad_agricola": "",
+      "unidad_agricola": "ZONA-HUAMBACHO",
       "modulo": "ALVA RAMIREZ KATHERINE MARIANNE",
       "campo": "C1",
       "status": "SIN CATEGORÍA"
-    },
-    {
-      "unidad_agricola": "",
-      "modulo": "GARAY VILLEGAS SOFIA ESTEFANIA",
-      "campo": "C1",
-      "status": "SIN REGISTRO"
     },
     {
       "unidad_agricola": "",
@@ -127,13 +121,7 @@
       "status": "SIN REGISTRO"
     },
     {
-      "unidad_agricola": "",
-      "modulo": "TERRONES SANCHEZ LUIS AUGUSTO",
-      "campo": "C3",
-      "status": "SIN REGISTRO"
-    },
-    {
-      "unidad_agricola": "",
+      "unidad_agricola": "ZONA-LAGUNAS",
       "modulo": "ZUÑIGA HERNANDEZ JAN JESUS",
       "campo": "C1",
       "status": "SIN CATEGORÍA"
