@@ -2,9 +2,9 @@
   "running": true,
   "done": false,
   "error": null,
-  "paso": 3.99,
+  "paso": 4,
   "total_pasos": 6,
-  "mensaje": "Validando categorización de campos en la intranet... (14/14)",
+  "mensaje": "Guardando historial en el Excel acumulado...",
   "fecha_objetivo": "27/09/2026",
-  "actualizado": "2026-09-28T13:21:09.227059Z"
+  "actualizado": "2026-09-28T13:21:16.085866Z"
 }
