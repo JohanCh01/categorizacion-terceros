@@ -1,6 +1,6 @@
 {
   "fecha_objetivo": "28/09/2026",
-  "generado": "2026-09-28T18:20:52.976223Z",
+  "generado": "2026-09-29T13:07:25.252259Z",
   "filas": [
     {
       "UNIDAD AGRICOLA": "ZONA-HUAMBACHO",
@@ -104,7 +104,7 @@
       "CAMPO": "C1",
       "CATEGORÍA": "CAT6",
       "MOTIVO": "PICADOS > 15%",
-      "STATUS": "SIN CATEGORÍA"
+      "STATUS": "SIN REGISTRO"
     }
   ],
   "problemas": [
@@ -118,7 +118,7 @@
       "unidad_agricola": "ZONA-LAGUNAS",
       "modulo": "ZUÑIGA HERNANDEZ JAN JESUS",
       "campo": "C1",
-      "status": "SIN CATEGORÍA"
+      "status": "SIN REGISTRO"
     }
   ],
   "todo_ok": false,
