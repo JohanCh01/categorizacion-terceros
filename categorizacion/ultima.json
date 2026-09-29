@@ -1,7 +1,31 @@
 {
-  "fecha_objetivo": "28/09/2026",
-  "generado": "2026-09-29T13:07:25.252259Z",
+  "fecha_objetivo": "29/09/2026",
+  "generado": "2026-09-29T13:15:20.809122Z",
   "filas": [
+    {
+      "UNIDAD AGRICOLA": "ZONA-CHAO",
+      "PROVEEDOR": "ABANTO RIOS JOSE SEBERINO",
+      "CAMPO": "C2",
+      "CATEGORÍA": "CAT6",
+      "MOTIVO": "PICADOS > 15%",
+      "STATUS": "CATEGORIZADO"
+    },
+    {
+      "UNIDAD AGRICOLA": "ZONA-CHAO",
+      "PROVEEDOR": "ABANTO RIOS JOSE SEBERINO",
+      "CAMPO": "C1",
+      "CATEGORÍA": "CAT6",
+      "MOTIVO": "PICADOS > 15%",
+      "STATUS": "CATEGORIZADO"
+    },
+    {
+      "UNIDAD AGRICOLA": "ZONA-HUAMBACHO",
+      "PROVEEDOR": "ALVA RAMIREZ KATHERINE MARIANNE",
+      "CAMPO": "C3",
+      "CATEGORÍA": "CAT6",
+      "MOTIVO": "PICADOS > 15%",
+      "STATUS": "CATEGORIZADO"
+    },
     {
       "UNIDAD AGRICOLA": "ZONA-HUAMBACHO",
       "PROVEEDOR": "ALVA RAMIREZ KATHERINE MARIANNE",
@@ -59,9 +83,33 @@
       "STATUS": "CATEGORIZADO"
     },
     {
+      "UNIDAD AGRICOLA": "ZONA-CHIMBOTE",
+      "PROVEEDOR": "PINEDO LOPEZ EDOR TADEO",
+      "CAMPO": "C2",
+      "CATEGORÍA": "CAT6",
+      "MOTIVO": "PICADOS > 15%",
+      "STATUS": "CATEGORIZADO"
+    },
+    {
       "UNIDAD AGRICOLA": "ZONA-LAGUNAS",
       "PROVEEDOR": "QUISPE VILLEGAS ERIKA",
       "CAMPO": "C1",
+      "CATEGORÍA": "CAT6",
+      "MOTIVO": "LARVA > 10%",
+      "STATUS": "CATEGORIZADO"
+    },
+    {
+      "UNIDAD AGRICOLA": "ZONA-VIRU",
+      "PROVEEDOR": "RODRIGUEZ FERRER HUGO ANTENOR",
+      "CAMPO": "C4",
+      "CATEGORÍA": "CAT6",
+      "MOTIVO": "PICADOS > 15%",
+      "STATUS": "CATEGORIZADO"
+    },
+    {
+      "UNIDAD AGRICOLA": "ZONA-VIRU",
+      "PROVEEDOR": "SICCHA LAIZA SANTOS AGUSTIN",
+      "CAMPO": "C4",
       "CATEGORÍA": "CAT6",
       "MOTIVO": "LARVA > 10%",
       "STATUS": "CATEGORIZADO"
@@ -97,14 +145,6 @@
       "CATEGORÍA": "CAT6",
       "MOTIVO": "POSTURAS > 4%",
       "STATUS": "CATEGORIZADO"
-    },
-    {
-      "UNIDAD AGRICOLA": "ZONA-LAGUNAS",
-      "PROVEEDOR": "ZUÑIGA HERNANDEZ JAN JESUS",
-      "CAMPO": "C1",
-      "CATEGORÍA": "CAT6",
-      "MOTIVO": "PICADOS > 15%",
-      "STATUS": "SIN REGISTRO"
     }
   ],
   "problemas": [
@@ -113,12 +153,6 @@
       "modulo": "ALVA RAMIREZ KATHERINE MARIANNE",
       "campo": "C1",
       "status": "SIN CATEGORÍA"
-    },
-    {
-      "unidad_agricola": "ZONA-LAGUNAS",
-      "modulo": "ZUÑIGA HERNANDEZ JAN JESUS",
-      "campo": "C1",
-      "status": "SIN REGISTRO"
     }
   ],
   "todo_ok": false,
