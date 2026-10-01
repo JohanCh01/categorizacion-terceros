@@ -1,46 +1,14 @@
 {
-  "fecha_objetivo": "30/09/2026",
-  "generado": "2026-09-30T13:33:21.038757Z",
+  "fecha_objetivo": "01/10/2026",
+  "generado": "2026-10-01T16:39:23.047181Z",
   "filas": [
     {
-      "UNIDAD AGRICOLA": "ZONA-CHAO",
-      "PROVEEDOR": "ABANTO RIOS JOSE SEBERINO",
-      "CAMPO": "C2",
-      "CATEGORÍA": "CAT6",
-      "MOTIVO": "PICADOS > 15%",
-      "STATUS": "CATEGORIZADO"
-    },
-    {
-      "UNIDAD AGRICOLA": "ZONA-CHAO",
-      "PROVEEDOR": "ABANTO RIOS JOSE SEBERINO",
+      "UNIDAD AGRICOLA": "ZONA-LAGUNAS",
+      "PROVEEDOR": "AGUINAGA PAISIG RICARDO RAUL",
       "CAMPO": "C1",
       "CATEGORÍA": "CAT6",
-      "MOTIVO": "PICADOS > 15%",
+      "MOTIVO": "POSTURAS > 4%",
       "STATUS": "CATEGORIZADO"
-    },
-    {
-      "UNIDAD AGRICOLA": "ZONA-HUAMBACHO",
-      "PROVEEDOR": "ALVA RAMIREZ KATHERINE MARIANNE",
-      "CAMPO": "C3",
-      "CATEGORÍA": "CAT6",
-      "MOTIVO": "PICADOS > 15%",
-      "STATUS": "CATEGORIZADO"
-    },
-    {
-      "UNIDAD AGRICOLA": "ZONA-HUAMBACHO",
-      "PROVEEDOR": "ALVA RAMIREZ KATHERINE MARIANNE",
-      "CAMPO": "C2",
-      "CATEGORÍA": "CAT6",
-      "MOTIVO": "PICADOS > 15%",
-      "STATUS": "CATEGORIZADO"
-    },
-    {
-      "UNIDAD AGRICOLA": "ZONA-HUAMBACHO",
-      "PROVEEDOR": "ALVA RAMIREZ KATHERINE MARIANNE",
-      "CAMPO": "C1",
-      "CATEGORÍA": "CAT6",
-      "MOTIVO": "PICADOS > 15%",
-      "STATUS": "SIN CATEGORÍA"
     },
     {
       "UNIDAD AGRICOLA": "ZONA-CAYALTI",
@@ -67,9 +35,9 @@
       "STATUS": "CATEGORIZADO"
     },
     {
-      "UNIDAD AGRICOLA": "ZONA-BARRANCA",
-      "PROVEEDOR": "GARAY VILLEGAS SOFIA ESTEFANIA",
-      "CAMPO": "C1B",
+      "UNIDAD AGRICOLA": "ZONA-CHIMBOTE",
+      "PROVEEDOR": "FUNDO VARVAL S.A.C.",
+      "CAMPO": "C11",
       "CATEGORÍA": "CAT6",
       "MOTIVO": "LARVA > 10%",
       "STATUS": "CATEGORIZADO"
@@ -80,15 +48,7 @@
       "CAMPO": "C1",
       "CATEGORÍA": "CAT6",
       "MOTIVO": "LARVA > 10%",
-      "STATUS": "CATEGORIZADO"
-    },
-    {
-      "UNIDAD AGRICOLA": "ZONA-CASMA",
-      "PROVEEDOR": "HUAMAN HENOSTROZA DONATO APOLONIO",
-      "CAMPO": "C2",
-      "CATEGORÍA": "CAT6",
-      "MOTIVO": "PICADOS > 15%",
-      "STATUS": "CATEGORIZADO"
+      "STATUS": "SIN CATEGORÍA"
     },
     {
       "UNIDAD AGRICOLA": "ZONA-HUARMEY",
@@ -99,27 +59,11 @@
       "STATUS": "CATEGORIZADO"
     },
     {
-      "UNIDAD AGRICOLA": "ZONA-BARRANCA",
-      "PROVEEDOR": "MATOS BUSTAMANTE KATHERIN STHEPHANIE",
-      "CAMPO": "C1",
-      "CATEGORÍA": "CAT6",
-      "MOTIVO": "LARVA > 10%",
-      "STATUS": "CATEGORIZADO"
-    },
-    {
       "UNIDAD AGRICOLA": "ZONA-BATANGRANDE",
       "PROVEEDOR": "OLIVERA GUERRERO DOMITILA",
       "CAMPO": "C1",
       "CATEGORÍA": "CAT6",
       "MOTIVO": "POSTURAS > 4%",
-      "STATUS": "CATEGORIZADO"
-    },
-    {
-      "UNIDAD AGRICOLA": "ZONA-CHIMBOTE",
-      "PROVEEDOR": "PINEDO LOPEZ EDOR TADEO",
-      "CAMPO": "C2",
-      "CATEGORÍA": "CAT6",
-      "MOTIVO": "PICADOS > 15%",
       "STATUS": "CATEGORIZADO"
     },
     {
@@ -136,15 +80,15 @@
       "CAMPO": "C1C",
       "CATEGORÍA": "CAT6",
       "MOTIVO": "LARVA > 10%",
-      "STATUS": "CATEGORIZADO"
+      "STATUS": "SIN CATEGORÍA"
     },
     {
-      "UNIDAD AGRICOLA": "ZONA-VIRU",
-      "PROVEEDOR": "RODRIGUEZ FERRER HUGO ANTENOR",
-      "CAMPO": "C4",
-      "CATEGORÍA": "CAT6",
-      "MOTIVO": "PICADOS > 15%",
-      "STATUS": "CATEGORIZADO"
+      "UNIDAD AGRICOLA": "ZONA-CAYALTI",
+      "PROVEEDOR": "RODRIGUEZ REYES MODESTO",
+      "CAMPO": "C1",
+      "CATEGORÍA": "CAT2",
+      "MOTIVO": "POSTURAS 2-4%",
+      "STATUS": "SIN CATEGORÍA"
     },
     {
       "UNIDAD AGRICOLA": "ZONA-HUAURA",
@@ -176,7 +120,7 @@
       "CAMPO": "C4",
       "CATEGORÍA": "CAT6",
       "MOTIVO": "LARVA > 10%",
-      "STATUS": "CATEGORIZADO"
+      "STATUS": "SIN CATEGORÍA"
     },
     {
       "UNIDAD AGRICOLA": "ZONA-CHIMBOTE",
@@ -184,7 +128,7 @@
       "CAMPO": "C1",
       "CATEGORÍA": "CAT6",
       "MOTIVO": "POSTURAS > 4%",
-      "STATUS": "CATEGORIZADO"
+      "STATUS": "SIN CATEGORÍA"
     },
     {
       "UNIDAD AGRICOLA": "ZONA-PUEBLO NUEVO",
@@ -197,8 +141,32 @@
   ],
   "problemas": [
     {
-      "unidad_agricola": "ZONA-HUAMBACHO",
-      "modulo": "ALVA RAMIREZ KATHERINE MARIANNE",
+      "unidad_agricola": "ZONA-CAYALTI",
+      "modulo": "GUEVARA COTRINA EDGAR ROBINSON",
+      "campo": "C1",
+      "status": "SIN CATEGORÍA"
+    },
+    {
+      "unidad_agricola": "ZONA-CAYALTI",
+      "modulo": "RAFAEL TORRES ROLI ISMAEL",
+      "campo": "C1C",
+      "status": "SIN CATEGORÍA"
+    },
+    {
+      "unidad_agricola": "ZONA-CAYALTI",
+      "modulo": "RODRIGUEZ REYES MODESTO",
+      "campo": "C1",
+      "status": "SIN CATEGORÍA"
+    },
+    {
+      "unidad_agricola": "ZONA-CAYALTI",
+      "modulo": "TERRONES SANCHEZ LUIS AUGUSTO",
+      "campo": "C4",
+      "status": "SIN CATEGORÍA"
+    },
+    {
+      "unidad_agricola": "ZONA-CHIMBOTE",
+      "modulo": "VALVERDE AZAÑA ADRIAN NEL",
       "campo": "C1",
       "status": "SIN CATEGORÍA"
     }
