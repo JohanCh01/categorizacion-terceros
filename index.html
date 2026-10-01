@@ -17,7 +17,8 @@
     padding: calc(16px + env(safe-area-inset-top)) 20px 16px;
   }
   header h1 { margin: 0; font-size: 1.15rem; }
-  header p { margin: 4px 0 0; font-size: 0.8rem; opacity: 0.85; }
+  .header-fila { display: flex; align-items: center; justify-content: center; gap: 10px; }
+  .header-logo { height: 28px; max-width: 90px; object-fit: contain; }
   .contenido { padding: 12px 14px 40px; max-width: 640px; margin: 0 auto; }
 
   .cat-form { background: white; border-radius: 10px; padding: 14px; margin-bottom: 14px; }
@@ -31,7 +32,27 @@
   .cat-indicador-titulo { font-weight: 700; font-size: 0.85rem; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
   .cat-fila-2 { display: flex; gap: 8px; }
   .cat-fila-2 > div { flex: 1; }
-  .cat-banda { margin-top: 8px; padding-top: 8px; border-top: 1px dashed #ddd; font-size: 0.85rem; }
+  .cat-campo input:disabled { background: #eee; color: #888; }
+  .cat-regla { display: flex; flex-direction: column; gap: 4px; margin: 8px 0 2px; }
+  .cat-regla-linea {
+    display: flex; justify-content: space-between; align-items: center; gap: 8px;
+    background: #f7f7f9; border-radius: 6px; padding: 6px 10px; font-size: 0.78rem; color: #555;
+  }
+  .cat-regla-chip { font-weight: 700; border-radius: 12px; padding: 2px 10px; font-size: 0.75rem; white-space: nowrap; }
+  .chip-ok { background: #e6f4ea; color: #2e7d32; }
+  .chip-mid { background: #fff3e0; color: #e65100; }
+  .chip-cat6 { background: #fdecea; color: #c62828; }
+  .cat-tramos-toggle { display: block; font-size: 0.82rem; color: #333; margin: 2px 0 8px; }
+  .tramo-fila { display: flex; gap: 8px; align-items: flex-end; margin-bottom: 8px; }
+  .tramo-fila .cat-campo { flex: 1; margin-bottom: 0; }
+  .tramo-fila .btn-quitar-tramo {
+    flex: 0 0 auto; background: #fdecea; color: #c62828; border: 1px solid #f5c6c0; border-radius: 8px;
+    width: 34px; height: 34px; font-size: 1rem; cursor: pointer;
+  }
+  .btn-agregar-tramo {
+    width: 100%; padding: 8px; background: white; color: var(--azul); border: 1px dashed var(--azul);
+    border-radius: 8px; font-size: 0.85rem; font-weight: 600; cursor: pointer; margin-bottom: 4px;
+  }
   .btn-iniciar {
     width: 100%; padding: 14px; background: var(--rojo-danper); color: white; border: none;
     border-radius: 10px; font-size: 1rem; font-weight: 700; cursor: pointer; margin-top: 6px;
@@ -43,9 +64,19 @@
     border-radius: 10px; font-size: 1rem; font-weight: 700; cursor: pointer;
   }
   .fase2-nota { font-size: 0.8rem; color: #777; margin-top: 8px; }
-  .progreso-caja { background: white; border-radius: 10px; padding: 14px; margin-top: 14px; text-align: center; }
-  .progreso-barra-fondo { background: #eee; border-radius: 20px; height: 10px; overflow: hidden; margin: 10px 0; }
-  .progreso-barra { background: var(--azul); height: 100%; width: 0%; transition: width .3s ease; }
+  .fase2-excluir { display: block; font-size: 0.82rem; color: #333; margin-bottom: 10px; text-align: left; }
+  .progreso-caja { background: white; border-radius: 10px; padding: 18px 14px; margin-top: 14px; text-align: center; }
+  .progreso-spinner {
+    width: 32px; height: 32px; margin: 0 auto 10px; border-radius: 50%;
+    border: 3px solid #e0e0e0; border-top-color: var(--azul);
+    animation: cat-girar 0.8s linear infinite;
+  }
+  .progreso-spinner.ok {
+    border: none; background: #e6f4ea; color: #2e7d32; font-size: 1.1rem; font-weight: 800;
+    display: flex; align-items: center; justify-content: center; animation: none;
+  }
+  @keyframes cat-girar { to { transform: rotate(360deg); } }
+  .progreso-parte { font-weight: 700; font-size: 0.9rem; color: #333; margin-bottom: 2px; }
   .progreso-texto { font-size: 0.85rem; color: #555; }
   .resultado-caja { margin-top: 16px; }
   .resultado-imagen-wrap { background: white; border-radius: 10px; padding: 10px; text-align: center; }
@@ -64,8 +95,10 @@
 <body>
 
 <header>
-  <h1>Categorización de Campos Terceros</h1>
-  <p>FOSFINA · Danper (página de prueba)</p>
+  <div class="header-fila">
+    <h1>Categorización de Campos Terceros</h1>
+    <img src="logo-danper.png" alt="Danper" class="header-logo" onerror="this.style.display='none'">
+  </div>
 </header>
 
 <div class="contenido">
@@ -85,48 +118,40 @@
   <div class="cat-form">
     <h3>Indicadores</h3>
 
-    <div class="cat-indicador">
+    <div class="cat-indicador" data-prefijo="larva">
       <div class="cat-indicador-titulo"><input type="checkbox" id="larvaEnabled" checked> LARVA DE LEPIDÓPTEROS</div>
-      <div class="cat-campo"><label>Umbral (%)</label><input type="number" id="larvaUmbral" value="10" step="0.1"></div>
-      <div class="cat-banda">
-        <label><input type="checkbox" id="larvaBandaEnabled"> Definir banda especial</label>
-        <div class="cat-fila-2" style="margin-top:6px">
-          <div class="cat-campo"><label>Hasta (%)</label><input type="number" id="larvaBandaHasta" step="0.1" disabled></div>
-          <div class="cat-campo"><label>Categoría</label><input type="number" id="larvaBandaCategoria" value="2" disabled></div>
-        </div>
-      </div>
+      <div class="cat-campo" id="larvaUmbralSimpleWrap"><label>Umbral (%)</label><input type="number" id="larvaUmbral" value="10" step="0.1"></div>
+      <label class="cat-tramos-toggle"><input type="checkbox" id="larvaTramosEnabled"> Definir tramos personalizados</label>
+      <div id="larvaTramosLista" style="display:none"></div>
+      <button class="btn-agregar-tramo" id="larvaAgregarTramo" type="button" style="display:none">+ Agregar tramo</button>
+      <div class="cat-regla" id="larvaRegla"></div>
     </div>
 
-    <div class="cat-indicador">
+    <div class="cat-indicador" data-prefijo="posturas">
       <div class="cat-indicador-titulo"><input type="checkbox" id="posturasEnabled" checked> POSTURAS</div>
-      <div class="cat-campo"><label>Umbral (%)</label><input type="number" id="posturasUmbral" value="2" step="0.1"></div>
-      <div class="cat-banda">
-        <label><input type="checkbox" id="posturasBandaEnabled"> Definir banda especial</label>
-        <div class="cat-fila-2" style="margin-top:6px">
-          <div class="cat-campo"><label>Hasta (%)</label><input type="number" id="posturasBandaHasta" step="0.1" disabled></div>
-          <div class="cat-campo"><label>Categoría</label><input type="number" id="posturasBandaCategoria" value="2" disabled></div>
-        </div>
-      </div>
+      <div class="cat-campo" id="posturasUmbralSimpleWrap"><label>Umbral (%)</label><input type="number" id="posturasUmbral" value="2" step="0.1"></div>
+      <label class="cat-tramos-toggle"><input type="checkbox" id="posturasTramosEnabled"> Definir tramos personalizados</label>
+      <div id="posturasTramosLista" style="display:none"></div>
+      <button class="btn-agregar-tramo" id="posturasAgregarTramo" type="button" style="display:none">+ Agregar tramo</button>
+      <div class="cat-regla" id="posturasRegla"></div>
     </div>
 
-    <div class="cat-indicador">
+    <div class="cat-indicador" data-prefijo="picados">
       <div class="cat-indicador-titulo"><input type="checkbox" id="picadosEnabled" checked> PICADOS ELASMOSPALPUS</div>
-      <div class="cat-campo"><label>Umbral (%)</label><input type="number" id="picadosUmbral" value="10" step="0.1"></div>
-      <div class="cat-banda">
-        <label><input type="checkbox" id="picadosBandaEnabled"> Definir banda especial</label>
-        <div class="cat-fila-2" style="margin-top:6px">
-          <div class="cat-campo"><label>Hasta (%)</label><input type="number" id="picadosBandaHasta" step="0.1" disabled></div>
-          <div class="cat-campo"><label>Categoría</label><input type="number" id="picadosBandaCategoria" value="2" disabled></div>
-        </div>
-      </div>
+      <div class="cat-campo" id="picadosUmbralSimpleWrap"><label>Umbral (%)</label><input type="number" id="picadosUmbral" value="10" step="0.1"></div>
+      <label class="cat-tramos-toggle"><input type="checkbox" id="picadosTramosEnabled"> Definir tramos personalizados</label>
+      <div id="picadosTramosLista" style="display:none"></div>
+      <button class="btn-agregar-tramo" id="picadosAgregarTramo" type="button" style="display:none">+ Agregar tramo</button>
+      <div class="cat-regla" id="picadosRegla"></div>
     </div>
   </div>
 
   <button class="btn-iniciar" id="btnIniciar">Iniciar</button>
 
   <div class="progreso-caja" id="progresoCaja" style="display:none">
+    <div class="progreso-spinner" id="progresoSpinner"></div>
+    <div class="progreso-parte" id="progresoParte">Parte 1/3</div>
     <div class="progreso-texto" id="progresoTexto">Iniciando...</div>
-    <div class="progreso-barra-fondo"><div class="progreso-barra" id="progresoBarra"></div></div>
   </div>
 
   <div class="resultado-caja" id="resultadoCaja" style="display:none">
@@ -141,6 +166,10 @@
   </div>
 
   <div class="fase2-caja" id="fase2Caja" style="display:none">
+    <label class="fase2-excluir">
+      <input type="checkbox" id="fase2ExcluirObservados" checked>
+      Excluir proveedores observados (SIN CATEGORÍA / SIN REGISTRO)
+    </label>
     <button class="btn-fase2" id="btnFase2">Iniciar Fase 2</button>
     <div class="fase2-nota">Categorización de las unidades agrícolas propias (por implementar).</div>
   </div>
@@ -192,34 +221,135 @@
   inputHistorial.min = fmtISO(haceUnaSemanaCat);
   inputHistorial.max = fmtISO(hoyCat);
 
-  // Bloquea/desbloquea "Hasta (%)" y "Categoría" según si "Definir banda
-  // especial" está marcado, para cada indicador (larva, posturas, picados).
-  function wireBanda(prefijo) {
-    const chk = document.getElementById(prefijo + 'BandaEnabled');
-    const hasta = document.getElementById(prefijo + 'BandaHasta');
-    const categoria = document.getElementById(prefijo + 'BandaCategoria');
-    function actualizar() {
-      hasta.disabled = !chk.checked;
-      categoria.disabled = !chk.checked;
+  // Tramos personalizados por indicador: cada indicador puede evaluarse
+  // con un Umbral simple (todo lo que lo supere -> CAT 6), o con una
+  // lista de tramos (el primero siempre "sin desviación", los
+  // siguientes cada uno con su propia categoría), terminando siempre en
+  // CAT 6 para lo que no cae en ningún tramo definido. Esto refleja
+  // exactamente lo que hace _evaluar_indicador() en procesamiento.py.
+  const tramosState = {};
+
+  function tramosPorDefecto(prefijo) {
+    const umbral = parseFloat(document.getElementById(prefijo + 'Umbral').value) || 0;
+    return [
+      { hasta: umbral, categoria: null },
+      { hasta: umbral + 2, categoria: 2 },
+    ];
+  }
+
+  function renderRegla(prefijo, tramosEnabled) {
+    const cont = document.getElementById(prefijo + 'Regla');
+    let html = '';
+    let desde = 0;
+    if (tramosEnabled) {
+      (tramosState[prefijo] || []).forEach((t) => {
+        if (t.categoria === null) {
+          html += `<div class="cat-regla-linea"><span>Hasta ${t.hasta}%</span><span class="cat-regla-chip chip-ok">Sin desviación</span></div>`;
+        } else {
+          html += `<div class="cat-regla-linea"><span>De ${desde}% a ${t.hasta}%</span><span class="cat-regla-chip chip-mid">CAT ${t.categoria}</span></div>`;
+        }
+        desde = t.hasta;
+      });
+    } else {
+      const umbral = document.getElementById(prefijo + 'Umbral').value || '0';
+      html += `<div class="cat-regla-linea"><span>Hasta ${umbral}%</span><span class="cat-regla-chip chip-ok">Sin desviación</span></div>`;
+      desde = umbral;
     }
-    chk.addEventListener('change', actualizar);
+    html += `<div class="cat-regla-linea"><span>Más de ${desde}%</span><span class="cat-regla-chip chip-cat6">CAT 6</span></div>`;
+    cont.innerHTML = html;
+  }
+
+  function renderTramos(prefijo) {
+    const lista = document.getElementById(prefijo + 'TramosLista');
+    lista.innerHTML = '';
+    (tramosState[prefijo] || []).forEach((t, i) => {
+      const fila = document.createElement('div');
+      fila.className = 'tramo-fila';
+
+      const campoHasta = document.createElement('div');
+      campoHasta.className = 'cat-campo';
+      campoHasta.innerHTML = `<label>${i === 0 ? 'Sin desviación hasta (%)' : 'Hasta (%)'}</label>
+        <input type="number" step="0.1" value="${t.hasta}">`;
+      campoHasta.querySelector('input').addEventListener('input', (e) => {
+        tramosState[prefijo][i].hasta = parseFloat(e.target.value) || 0;
+        renderRegla(prefijo, true);
+      });
+      fila.appendChild(campoHasta);
+
+      if (i > 0) {
+        const campoCat = document.createElement('div');
+        campoCat.className = 'cat-campo';
+        campoCat.innerHTML = `<label>Categoría</label><input type="number" value="${t.categoria}">`;
+        campoCat.querySelector('input').addEventListener('input', (e) => {
+          tramosState[prefijo][i].categoria = parseInt(e.target.value, 10) || 0;
+          renderRegla(prefijo, true);
+        });
+        fila.appendChild(campoCat);
+
+        if (i > 1) {
+          const btnQuitar = document.createElement('button');
+          btnQuitar.type = 'button';
+          btnQuitar.className = 'btn-quitar-tramo';
+          btnQuitar.textContent = '✕';
+          btnQuitar.addEventListener('click', () => {
+            tramosState[prefijo].splice(i, 1);
+            renderTramos(prefijo);
+            renderRegla(prefijo, true);
+          });
+          fila.appendChild(btnQuitar);
+        }
+      }
+      lista.appendChild(fila);
+    });
+  }
+
+  function wireIndicador(prefijo) {
+    const toggle = document.getElementById(prefijo + 'TramosEnabled');
+    const simpleWrap = document.getElementById(prefijo + 'UmbralSimpleWrap');
+    const lista = document.getElementById(prefijo + 'TramosLista');
+    const btnAgregar = document.getElementById(prefijo + 'AgregarTramo');
+    const umbral = document.getElementById(prefijo + 'Umbral');
+
+    function actualizar() {
+      const on = toggle.checked;
+      simpleWrap.style.display = on ? 'none' : 'block';
+      lista.style.display = on ? 'block' : 'none';
+      btnAgregar.style.display = on ? 'block' : 'none';
+      if (on && !tramosState[prefijo]) {
+        tramosState[prefijo] = tramosPorDefecto(prefijo);
+      }
+      if (on) renderTramos(prefijo);
+      renderRegla(prefijo, on);
+    }
+
+    toggle.addEventListener('change', actualizar);
+    umbral.addEventListener('input', () => renderRegla(prefijo, toggle.checked));
+    btnAgregar.addEventListener('click', () => {
+      const ultimo = tramosState[prefijo][tramosState[prefijo].length - 1];
+      tramosState[prefijo].push({ hasta: ultimo.hasta + 1, categoria: 4 });
+      renderTramos(prefijo);
+      renderRegla(prefijo, true);
+    });
     actualizar();
   }
-  ['larva', 'posturas', 'picados'].forEach(wireBanda);
+  ['larva', 'posturas', 'picados'].forEach(wireIndicador);
 
   function indicador(prefijo) {
     const enabled = document.getElementById(prefijo + 'Enabled').checked;
     if (!enabled) return { enabled: false };
-    const umbral = parseFloat(document.getElementById(prefijo + 'Umbral').value) / 100;
-    const cfg = { enabled: true, umbral: umbral, banda_enabled: false };
-    const bandaEnabled = document.getElementById(prefijo + 'BandaEnabled').checked;
-    if (bandaEnabled) {
-      cfg.banda_enabled = true;
-      cfg.banda_upper = parseFloat(document.getElementById(prefijo + 'BandaHasta').value) / 100;
-      cfg.banda_categoria = parseInt(document.getElementById(prefijo + 'BandaCategoria').value, 10);
+    const tramosEnabled = document.getElementById(prefijo + 'TramosEnabled').checked;
+    let tramos;
+    if (tramosEnabled) {
+      tramos = (tramosState[prefijo] || []).map((t) => (
+        t.categoria === null ? { hasta: t.hasta / 100 } : { hasta: t.hasta / 100, categoria: t.categoria }
+      ));
+    } else {
+      const umbral = parseFloat(umbralEl(prefijo).value) / 100;
+      tramos = [{ hasta: umbral }];
     }
-    return cfg;
+    return { enabled: true, tramos: tramos };
   }
+  function umbralEl(prefijo) { return document.getElementById(prefijo + 'Umbral'); }
 
   function armarConfig() {
     return {
@@ -236,18 +366,32 @@
 
   const btnIniciar = document.getElementById('btnIniciar');
   const progresoCaja = document.getElementById('progresoCaja');
+  const progresoSpinner = document.getElementById('progresoSpinner');
+  const progresoParte = document.getElementById('progresoParte');
   const progresoTexto = document.getElementById('progresoTexto');
-  const progresoBarra = document.getElementById('progresoBarra');
   const resultadoCaja = document.getElementById('resultadoCaja');
   const LS_KEY = 'categorizacion_dispatch_ts';
   let intervaloSondeo = null;
 
+  // Son 3 "partes" visibles para el usuario, aunque el backend reporte
+  // pasos más finos (1=descarga, 2-3=entrar a la intranet, 4-6=procesar
+  // y publicar): Parte 1 = descarga de FOSFINA, Parte 2 = intranet
+  // (Recepción + Categorización), Parte 3 = guardar/generar/publicar.
+  function pasoAParte(paso) {
+    const p = Math.floor(paso || 1);
+    if (p <= 1) return 1;
+    if (p <= 3) return 2;
+    return 3;
+  }
+
   btnIniciar.addEventListener('click', async () => {
     btnIniciar.disabled = true;
     resultadoCaja.style.display = 'none';
+    progresoSpinner.className = 'progreso-spinner';
+    progresoSpinner.textContent = '';
+    progresoParte.textContent = 'Parte 1/3';
     progresoCaja.style.display = 'block';
     progresoTexto.textContent = 'Enviando orden de inicio...';
-    progresoBarra.style.width = '3%';
 
     const cfg = armarConfig();
     try {
@@ -286,8 +430,7 @@
       if (tsDisparo && tsEstado < tsDisparo - 5000) return;
 
       progresoCaja.style.display = 'block';
-      const pct = Math.round((estado.paso / (estado.total_pasos || 6)) * 100);
-      progresoBarra.style.width = Math.max(pct, 4) + '%';
+      progresoParte.textContent = `Parte ${pasoAParte(estado.paso)}/3`;
       progresoTexto.textContent = estado.mensaje || '...';
 
       if (estado.done) {
@@ -296,8 +439,13 @@
         if (estado.error) {
           progresoTexto.textContent = 'Error: ' + estado.error;
         } else {
-          progresoCaja.style.display = 'none';
-          mostrarResultado();
+          progresoSpinner.className = 'progreso-spinner ok';
+          progresoSpinner.textContent = '✓';
+          progresoTexto.textContent = 'Listo.';
+          setTimeout(() => {
+            progresoCaja.style.display = 'none';
+            mostrarResultado();
+          }, 900);
         }
       }
     } catch (e) {}
