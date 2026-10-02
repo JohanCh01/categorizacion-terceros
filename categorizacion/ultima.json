@@ -1,6 +1,6 @@
 {
   "fecha_objetivo": "02/10/2026",
-  "generado": "2026-10-02T13:56:20.508258Z",
+  "generado": "2026-10-02T19:40:43.614951Z",
   "filas": [
     {
       "UNIDAD AGRICOLA": "ZONA-CHAO",
@@ -111,7 +111,7 @@
       "PROVEEDOR": "MATEO ESPINOZA JHONATHAN JOE",
       "CAMPO": "C1",
       "CATEGORÍA": "CAT6",
-      "MOTIVO": "PICADOS > 15%",
+      "MOTIVO": "PICADOS > 10%",
       "STATUS": "CATEGORIZADO"
     },
     {
