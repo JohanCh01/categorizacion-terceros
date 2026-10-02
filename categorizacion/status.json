@@ -2,9 +2,9 @@
   "running": true,
   "done": false,
   "error": null,
-  "paso": 2.99,
+  "paso": 3,
   "total_pasos": 6,
-  "mensaje": "Entrando a la intranet: Recepción de Materia Prima...",
+  "mensaje": "Validando categorización de campos en la intranet...",
   "fecha_objetivo": "01/10/2026",
-  "actualizado": "2026-10-02T13:52:53.831378Z"
+  "actualizado": "2026-10-02T13:52:55.558376Z"
 }
