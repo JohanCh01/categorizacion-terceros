@@ -1,6 +1,6 @@
 {
   "fecha_objetivo": "02/10/2026",
-  "generado": "2026-10-02T13:46:24.794922Z",
+  "generado": "2026-10-02T13:56:20.508258Z",
   "filas": [
     {
       "UNIDAD AGRICOLA": "ZONA-CHAO",
@@ -115,12 +115,12 @@
       "STATUS": "CATEGORIZADO"
     },
     {
-      "UNIDAD AGRICOLA": "",
-      "PROVEEDOR": "MATOS BUSTAMANTE KATHERINE STEPHANIE",
+      "UNIDAD AGRICOLA": "ZONA-BARRANCA",
+      "PROVEEDOR": "MATOS BUSTAMANTE KATHERIN STHEPHANIE",
       "CAMPO": "C1",
       "CATEGORÍA": "CAT2",
       "MOTIVO": "POSTURAS 2-4%",
-      "STATUS": "SIN REGISTRO"
+      "STATUS": "CATEGORIZADO"
     },
     {
       "UNIDAD AGRICOLA": "ZONA-BATANGRANDE",
@@ -209,12 +209,6 @@
       "modulo": "GUEVARA COTRINA EDGAR ROBINSON",
       "campo": "C1",
       "status": "SIN CATEGORÍA"
-    },
-    {
-      "unidad_agricola": "",
-      "modulo": "MATOS BUSTAMANTE KATHERINE STEPHANIE",
-      "campo": "C1",
-      "status": "SIN REGISTRO"
     },
     {
       "unidad_agricola": "ZONA-CAYALTI",
