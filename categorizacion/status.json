@@ -2,9 +2,9 @@
   "running": true,
   "done": false,
   "error": null,
-  "paso": 2,
+  "paso": 2.25,
   "total_pasos": 6,
   "mensaje": "Entrando a la intranet: Recepción de Materia Prima...",
   "fecha_objetivo": "01/10/2026",
-  "actualizado": "2026-10-02T13:42:11.524913Z"
+  "actualizado": "2026-10-02T13:42:23.369858Z"
 }
