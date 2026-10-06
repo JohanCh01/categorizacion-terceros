@@ -1,6 +1,6 @@
 {
   "fecha_objetivo": "06/10/2026",
-  "generado": "2026-10-06T14:08:06.870711Z",
+  "generado": "2026-10-06T14:19:19.288653Z",
   "filas": [
     {
       "UNIDAD AGRICOLA": "ZONA-CHAO",
@@ -160,7 +160,7 @@
       "CAMPO": "C3",
       "CATEGORÍA": "CAT2",
       "MOTIVO": "POSTURAS 2-4%",
-      "STATUS": "SIN CATEGORÍA"
+      "STATUS": "SIN REGISTRO"
     },
     {
       "UNIDAD AGRICOLA": "ZONA-BATANGRANDE",
@@ -246,7 +246,7 @@
       "unidad_agricola": "ZONA-BARRANCA",
       "modulo": "MONTECINOS TARAZONA HERMINIA ESTELA",
       "campo": "C3",
-      "status": "SIN CATEGORÍA"
+      "status": "SIN REGISTRO"
     },
     {
       "unidad_agricola": "ZONA-HUAURA",
