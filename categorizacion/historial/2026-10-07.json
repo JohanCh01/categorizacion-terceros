@@ -1,0 +1,177 @@
+{
+  "fecha_objetivo": "07/10/2026",
+  "generado": "2026-10-07T13:57:26.293544Z",
+  "filas": [
+    {
+      "UNIDAD AGRICOLA": "ZONA-CHAO",
+      "PROVEEDOR": "ABANTO RIOS JOSE SEBERINO",
+      "CAMPO": "C2",
+      "CATEGORÍA": "CAT6",
+      "MOTIVO": "PICADOS > 15%",
+      "STATUS": "CATEGORIZADO"
+    },
+    {
+      "UNIDAD AGRICOLA": "ZONA-VIRU",
+      "PROVEEDOR": "AGROPECUARIA SAN GREGORIO S.A.C.",
+      "CAMPO": "C4",
+      "CATEGORÍA": "CAT6",
+      "MOTIVO": "PICADOS > 15%",
+      "STATUS": "CATEGORIZADO"
+    },
+    {
+      "UNIDAD AGRICOLA": "ZONA-LAGUNAS",
+      "PROVEEDOR": "AGUINAGA PAISIG RICARDO RAUL",
+      "CAMPO": "C1",
+      "CATEGORÍA": "CAT6",
+      "MOTIVO": "LARVA > 10%",
+      "STATUS": "CATEGORIZADO"
+    },
+    {
+      "UNIDAD AGRICOLA": "ZONA-HUAMBACHO",
+      "PROVEEDOR": "ALVA RAMIREZ KATHERINE MARIANNE",
+      "CAMPO": "C3",
+      "CATEGORÍA": "CAT6",
+      "MOTIVO": "PICADOS > 15%",
+      "STATUS": "CATEGORIZADO"
+    },
+    {
+      "UNIDAD AGRICOLA": "ZONA-HUAMBACHO",
+      "PROVEEDOR": "ALVA RAMIREZ KATHERINE MARIANNE",
+      "CAMPO": "C2",
+      "CATEGORÍA": "CAT6",
+      "MOTIVO": "PICADOS > 15%",
+      "STATUS": "CATEGORIZADO"
+    },
+    {
+      "UNIDAD AGRICOLA": "ZONA-MOCUPE",
+      "PROVEEDOR": "ALVARADO LEONARDO HERNAN",
+      "CAMPO": "C1",
+      "CATEGORÍA": "CAT6",
+      "MOTIVO": "LARVA > 10%",
+      "STATUS": "CATEGORIZADO"
+    },
+    {
+      "UNIDAD AGRICOLA": "ZONA-CHAO",
+      "PROVEEDOR": "BENITES ALVARADO RAMIRO",
+      "CAMPO": "C8",
+      "CATEGORÍA": "CAT6",
+      "MOTIVO": "POSTURAS > 4%",
+      "STATUS": "CATEGORIZADO"
+    },
+    {
+      "UNIDAD AGRICOLA": "ZONA-CHIMBOTE",
+      "PROVEEDOR": "CASTRO MIRANDA CESAR AUGUSTO",
+      "CAMPO": "C3",
+      "CATEGORÍA": "CAT2",
+      "MOTIVO": "POSTURAS 2-4%",
+      "STATUS": "CATEGORIZADO"
+    },
+    {
+      "UNIDAD AGRICOLA": "ZONA-PUEBLO NUEVO",
+      "PROVEEDOR": "FERNANDEZ CUBAS GERSON WALKER",
+      "CAMPO": "C3",
+      "CATEGORÍA": "CAT6",
+      "MOTIVO": "POSTURAS > 4%",
+      "STATUS": "CATEGORIZADO"
+    },
+    {
+      "UNIDAD AGRICOLA": "ZONA-CHIMBOTE",
+      "PROVEEDOR": "FUNDO VARVAL S.A.C.",
+      "CAMPO": "C11",
+      "CATEGORÍA": "CAT6",
+      "MOTIVO": "PICADOS > 15%",
+      "STATUS": "CATEGORIZADO"
+    },
+    {
+      "UNIDAD AGRICOLA": "ZONA-CAYALTI",
+      "PROVEEDOR": "GUEVARA COTRINA EDGAR ROBINSON",
+      "CAMPO": "C1",
+      "CATEGORÍA": "CAT2",
+      "MOTIVO": "POSTURAS 2-4%",
+      "STATUS": "CATEGORIZADO"
+    },
+    {
+      "UNIDAD AGRICOLA": "ZONA-HUAURA",
+      "PROVEEDOR": "HUACANCA GUIMAREY ERIKA AMANDA",
+      "CAMPO": "C2",
+      "CATEGORÍA": "CAT6",
+      "MOTIVO": "POSTURAS > 4%",
+      "STATUS": "CATEGORIZADO"
+    },
+    {
+      "UNIDAD AGRICOLA": "ZONA-HUAURA",
+      "PROVEEDOR": "HUACANCA GUIMAREY ERIKA AMANDA",
+      "CAMPO": "C1",
+      "CATEGORÍA": "CAT6",
+      "MOTIVO": "LARVA > 10%",
+      "STATUS": "CATEGORIZADO"
+    },
+    {
+      "UNIDAD AGRICOLA": "ZONA-HUAURA",
+      "PROVEEDOR": "HUACANCA HUAROMA DIONICIO ALBERTO",
+      "CAMPO": "C1",
+      "CATEGORÍA": "CAT6",
+      "MOTIVO": "LARVA > 10%",
+      "STATUS": "CATEGORIZADO"
+    },
+    {
+      "UNIDAD AGRICOLA": "ZONA-LAGUNAS",
+      "PROVEEDOR": "MATEO ESPINOZA JHONATHAN JOE",
+      "CAMPO": "C1",
+      "CATEGORÍA": "CAT6",
+      "MOTIVO": "POSTURAS > 4%",
+      "STATUS": "CATEGORIZADO"
+    },
+    {
+      "UNIDAD AGRICOLA": "ZONA-BATANGRANDE",
+      "PROVEEDOR": "OLIVERA GUERRERO DOMITILA",
+      "CAMPO": "C1",
+      "CATEGORÍA": "CAT6",
+      "MOTIVO": "LARVA > 10%",
+      "STATUS": "CATEGORIZADO"
+    },
+    {
+      "UNIDAD AGRICOLA": "ZONA-PUEBLO NUEVO",
+      "PROVEEDOR": "RAFAEL GARCIA ROLI YOVAR",
+      "CAMPO": "C1",
+      "CATEGORÍA": "CAT6",
+      "MOTIVO": "LARVA > 10%",
+      "STATUS": "CATEGORIZADO"
+    },
+    {
+      "UNIDAD AGRICOLA": "ZONA-CAYALTI",
+      "PROVEEDOR": "RODRIGUEZ REYES MODESTO",
+      "CAMPO": "C1",
+      "CATEGORÍA": "CAT6",
+      "MOTIVO": "LARVA > 10%",
+      "STATUS": "CATEGORIZADO"
+    },
+    {
+      "UNIDAD AGRICOLA": "ZONA-HUAURA",
+      "PROVEEDOR": "SOLIS HUERTAS MARIA ISABEL",
+      "CAMPO": "C3",
+      "CATEGORÍA": "CAT6",
+      "MOTIVO": "LARVA > 10%",
+      "STATUS": "CATEGORIZADO"
+    },
+    {
+      "UNIDAD AGRICOLA": "ZONA-BARRANCA",
+      "PROVEEDOR": "VEGA ESPINOZA INES YOLANDA",
+      "CAMPO": "C1",
+      "CATEGORÍA": "CAT6",
+      "MOTIVO": "LARVA > 10%",
+      "STATUS": "CATEGORIZADO"
+    },
+    {
+      "UNIDAD AGRICOLA": "ZONA-PUEBLO NUEVO",
+      "PROVEEDOR": "VEGA TAICA JOSE GEINER",
+      "CAMPO": "C1",
+      "CATEGORÍA": "CAT6",
+      "MOTIVO": "LARVA > 10%",
+      "STATUS": "CATEGORIZADO"
+    }
+  ],
+  "problemas": [],
+  "todo_ok": true,
+  "sin_desviaciones": false
+}
