@@ -1,13 +1,13 @@
 {
   "fecha_objetivo": "08/10/2026",
-  "generado": "2026-10-08T13:28:18.266474Z",
+  "generado": "2026-10-08T13:45:33.960177Z",
   "filas": [
     {
       "UNIDAD AGRICOLA": "ZONA-CHAO",
       "PROVEEDOR": "ABANTO RIOS JOSE SEBERINO",
       "CAMPO": "C2",
       "CATEGORÍA": "CAT6",
-      "MOTIVO": "PICADOS > 15%",
+      "MOTIVO": "PICADOS > 10%",
       "STATUS": "CATEGORIZADO"
     },
     {
@@ -15,15 +15,7 @@
       "PROVEEDOR": "ABANTO RIOS JOSE SEBERINO",
       "CAMPO": "C1",
       "CATEGORÍA": "CAT6",
-      "MOTIVO": "PICADOS > 15%",
-      "STATUS": "CATEGORIZADO"
-    },
-    {
-      "UNIDAD AGRICOLA": "ZONA-MOCUPE",
-      "PROVEEDOR": "ACUÑA ASTONITAS JORGE",
-      "CAMPO": "C3",
-      "CATEGORÍA": "CAT2",
-      "MOTIVO": "POSTURAS 2-4%",
+      "MOTIVO": "PICADOS > 10%",
       "STATUS": "CATEGORIZADO"
     },
     {
@@ -31,7 +23,7 @@
       "PROVEEDOR": "AGROPECUARIA SAN GREGORIO S.A.C.",
       "CAMPO": "C4",
       "CATEGORÍA": "CAT6",
-      "MOTIVO": "PICADOS > 15%",
+      "MOTIVO": "PICADOS > 10%",
       "STATUS": "CATEGORIZADO"
     },
     {
@@ -55,7 +47,7 @@
       "PROVEEDOR": "ALVA RAMIREZ KATHERINE MARIANNE",
       "CAMPO": "C1",
       "CATEGORÍA": "CAT6",
-      "MOTIVO": "PICADOS > 15%",
+      "MOTIVO": "PICADOS > 10%",
       "STATUS": "CATEGORIZADO"
     },
     {
@@ -63,7 +55,7 @@
       "PROVEEDOR": "ALVA RAMIREZ KATHERINE MARIANNE",
       "CAMPO": "C2",
       "CATEGORÍA": "CAT6",
-      "MOTIVO": "PICADOS > 15%",
+      "MOTIVO": "PICADOS > 10%",
       "STATUS": "CATEGORIZADO"
     },
     {
@@ -79,15 +71,15 @@
       "PROVEEDOR": "BENITES ALVARADO RAMIRO",
       "CAMPO": "C4",
       "CATEGORÍA": "CAT6",
-      "MOTIVO": "POSTURAS > 4%",
+      "MOTIVO": "POSTURAS > 2%",
       "STATUS": "CATEGORIZADO"
     },
     {
       "UNIDAD AGRICOLA": "ZONA-BATANGRANDE",
       "PROVEEDOR": "CENTURION GALINDO RICARDO",
       "CAMPO": "C1",
-      "CATEGORÍA": "CAT2",
-      "MOTIVO": "POSTURAS 2-4%",
+      "CATEGORÍA": "CAT6",
+      "MOTIVO": "POSTURAS > 2%",
       "STATUS": "CATEGORIZADO"
     },
     {
@@ -95,15 +87,15 @@
       "PROVEEDOR": "FERNANDEZ CUBAS GERSON WALKER",
       "CAMPO": "C3",
       "CATEGORÍA": "CAT6",
-      "MOTIVO": "POSTURAS > 4%",
+      "MOTIVO": "POSTURAS > 2%",
       "STATUS": "CATEGORIZADO"
     },
     {
       "UNIDAD AGRICOLA": "ZONA-HUAURA",
       "PROVEEDOR": "HUACANCA GUIMAREY ERIKA AMANDA",
       "CAMPO": "C1",
-      "CATEGORÍA": "CAT2",
-      "MOTIVO": "POSTURAS 2-4%",
+      "CATEGORÍA": "CAT6",
+      "MOTIVO": "POSTURAS > 2%",
       "STATUS": "CATEGORIZADO"
     },
     {
@@ -111,7 +103,7 @@
       "PROVEEDOR": "HUACANCA GUIMAREY ERIKA AMANDA",
       "CAMPO": "C2",
       "CATEGORÍA": "CAT6",
-      "MOTIVO": "LARVA > 10%",
+      "MOTIVO": "POSTURAS > 2%",
       "STATUS": "CATEGORIZADO"
     },
     {
@@ -131,6 +123,14 @@
       "STATUS": "CATEGORIZADO"
     },
     {
+      "UNIDAD AGRICOLA": "ZONA-CASMA",
+      "PROVEEDOR": "HUAMAN HENOSTROZA DONATO APOLONIO",
+      "CAMPO": "C2",
+      "CATEGORÍA": "CAT6",
+      "MOTIVO": "PICADOS > 10%",
+      "STATUS": "CATEGORIZADO"
+    },
+    {
       "UNIDAD AGRICOLA": "ZONA-BATANGRANDE",
       "PROVEEDOR": "OLIVERA GUERRERO DOMITILA",
       "CAMPO": "C1",
@@ -143,7 +143,7 @@
       "PROVEEDOR": "RAFAEL GARCIA ROLI YOVAR",
       "CAMPO": "C1",
       "CATEGORÍA": "CAT6",
-      "MOTIVO": "PICADOS > 15%",
+      "MOTIVO": "PICADOS > 10%",
       "STATUS": "CATEGORIZADO"
     },
     {
@@ -165,33 +165,33 @@
     {
       "UNIDAD AGRICOLA": "ZONA-CAYALTI",
       "PROVEEDOR": "TERRONES SANCHEZ LUIS AUGUSTO",
-      "CAMPO": "C3A",
-      "CATEGORÍA": "CAT2",
-      "MOTIVO": "POSTURAS 2-4%",
+      "CAMPO": "C2",
+      "CATEGORÍA": "CAT6",
+      "MOTIVO": "PICADOS > 10%",
       "STATUS": "CATEGORIZADO"
     },
     {
       "UNIDAD AGRICOLA": "ZONA-CAYALTI",
       "PROVEEDOR": "TERRONES SANCHEZ LUIS AUGUSTO",
-      "CAMPO": "C2",
-      "CATEGORÍA": "CAT2",
-      "MOTIVO": "POSTURAS 2-4%",
+      "CAMPO": "C3A",
+      "CATEGORÍA": "CAT6",
+      "MOTIVO": "PICADOS > 10%",
       "STATUS": "CATEGORIZADO"
     },
     {
       "UNIDAD AGRICOLA": "ZONA-CHAO",
       "PROVEEDOR": "TORRES CRUZ RUBEN",
       "CAMPO": "C8",
-      "CATEGORÍA": "CAT2",
-      "MOTIVO": "POSTURAS 2-4%",
+      "CATEGORÍA": "CAT6",
+      "MOTIVO": "POSTURAS > 2%",
       "STATUS": "CATEGORIZADO"
     },
     {
       "UNIDAD AGRICOLA": "ZONA-BARRANCA",
       "PROVEEDOR": "TRUJILLO NIETO NILVER HUGO",
       "CAMPO": "C1B",
-      "CATEGORÍA": "CAT2",
-      "MOTIVO": "POSTURAS 2-4%",
+      "CATEGORÍA": "CAT6",
+      "MOTIVO": "POSTURAS > 2%",
       "STATUS": "CATEGORIZADO"
     },
     {
